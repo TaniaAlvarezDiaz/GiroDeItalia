@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "654466647662",
+    "firebase_url": "https://girodeitalia-9b1e6.firebaseio.com",
+    "project_id": "girodeitalia-9b1e6",
+    "storage_bucket": "girodeitalia-9b1e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654466647662:android:8dff803e5348f0e2",
+        "android_client_info": {
+          "package_name": "es.uniovi.sdm.alvfer.girodeitalia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654466647662-mmi6rba3ps4d9nqg9t63f84f81654tjk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "es.uniovi.sdm.alvfer.girodeitalia",
+            "certificate_hash": "ceff460a4a261adeb10c5537dc5a79515fc2a978"
+          }
+        },
+        {
+          "client_id": "654466647662-l5f970dmjkfk8fltclisdav0nnki8u9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF0PT-uKzLZz3COmBLKl_xU2CKefXKTT0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654466647662-l5f970dmjkfk8fltclisdav0nnki8u9g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
