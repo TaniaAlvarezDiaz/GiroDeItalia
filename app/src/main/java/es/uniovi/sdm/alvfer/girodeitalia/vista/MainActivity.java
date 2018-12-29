@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     if (listDataHeader.get(groupPosition).toString().equals("Recorrido general")) {
                         intent = new Intent(getApplicationContext(), RecorridoActivity.class);
                     } else if (listDataHeader.get(groupPosition).toString().equals("Patrimonio")) {
-                        intent = new Intent(getApplicationContext(), PatrimonioActivity.class);
+                        intent = new Intent(getApplicationContext(), NuevaPatrimonioActivity.class);
                     } else {
                         intent.putExtra(OPCION_ESCOGIDA, listDataHeader.get(groupPosition)
                                 .toString());
