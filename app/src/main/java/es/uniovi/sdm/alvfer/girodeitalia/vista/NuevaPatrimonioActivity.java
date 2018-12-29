@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import es.uniovi.sdm.alvfer.girodeitalia.R;
+
+
 public class NuevaPatrimonioActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
