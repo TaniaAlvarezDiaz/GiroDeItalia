@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import es.uniovi.sdm.alvfer.girodeitalia.datos.utilidades.FirebaseUtilidades;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.utilidades.ExpandableListAdapter;
 import es.uniovi.sdm.alvfer.girodeitalia.R;
 
@@ -121,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Operaciones con la BBDD, colocarlas aquí para que se hagan antes de pulsar las
         // opciones de menú
-        //FirebaseUtilidades.rellenarElementosPatrimonio();
+        FirebaseUtilidades.rellenarElementosPatrimonio();
     }
 
     /**

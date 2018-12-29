@@ -7,18 +7,20 @@ public class ElementoPatrimonio implements Parcelable {
 
     private String nombre;
     private String descripcion;
-    private String lugar;
     private int etapa;
+    private String lugar;
     private String nombreImagen;
+    private String tipoPatrimonio; // religioso, historico, cultural o geografico
 
 
     public ElementoPatrimonio(String nombre, String descripcion, int etapa, String lugar, String
-            nombreImagen) {
+            nombreImagen, String tipoPatrimonio) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.etapa = etapa;
         this.lugar = lugar;
         this.nombreImagen = nombreImagen;
+        this.tipoPatrimonio = tipoPatrimonio;
     }
 
     protected ElementoPatrimonio(Parcel in) {
@@ -27,6 +29,7 @@ public class ElementoPatrimonio implements Parcelable {
         this.etapa = in.readInt();
         this.lugar = in.readString();
         this.nombreImagen = in.readString();
+        this.tipoPatrimonio = in.readString();
     }
 
     public ElementoPatrimonio() {
@@ -56,6 +59,7 @@ public class ElementoPatrimonio implements Parcelable {
         dest.writeInt(getEtapa());
         dest.writeString(getLugar());
         dest.writeString(getNombreImagen());
+        dest.writeString(getTipoPatrimonio());
     }
 
     public String getNombre() {
@@ -76,6 +80,10 @@ public class ElementoPatrimonio implements Parcelable {
 
     public String getNombreImagen() {
         return nombreImagen;
+    }
+
+    public String getTipoPatrimonio() {
+        return tipoPatrimonio;
     }
 
     @Override

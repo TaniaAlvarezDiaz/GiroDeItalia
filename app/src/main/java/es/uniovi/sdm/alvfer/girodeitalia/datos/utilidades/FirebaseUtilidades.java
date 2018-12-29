@@ -46,14 +46,29 @@ public class FirebaseUtilidades {
                         "Basílica " +
                         "de San Petronio es la iglesia más antigua y grande de Bolonia, y una de " +
                         "las más " +
-                        "grandes del mundo.", 1, "Bolonia", "BasilicaDeSanPetronio.jpg"));
+                        "grandes del mundo.", 1, "Bolonia", "BasilicaDeSanPetronio.jpg",
+                        "religioso"));
                 elementosPatrimonio.add(new ElementoPatrimonio("Torres de los Asinelli y " +
                         "Garisenda", "En " +
                         "el pasado la ciudad de Bolonia tenía varias torres con funciones de " +
                         "defensa y " +
                         "señalización. Hoy en día solo quedan unas veinte, de las cuales las más " +
                         "famosas " +
-                        "son estas dos.", 1, "Bolonia", "TorresDeLosAsinelliYGarisenda.jpg"));
+                        "son estas dos.", 1, "Bolonia", "TorresDeLosAsinelliYGarisenda.jpg",
+                        "historico"));
+                // Elementos del patrimonio inventados
+                elementosPatrimonio.add(new ElementoPatrimonio("EPReligioso2", "Una descripcion",
+                        1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "religioso"));
+                elementosPatrimonio.add(new ElementoPatrimonio("EPHistorico2", "Una descripcion",
+                        1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "historico"));
+                elementosPatrimonio.add(new ElementoPatrimonio("EPCultural1", "Una descripcion",
+                        1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "cultural"));
+                elementosPatrimonio.add(new ElementoPatrimonio("EPCultural2", "Una descripcion",
+                        1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "cultural"));
+                elementosPatrimonio.add(new ElementoPatrimonio("EPGeografico1", "Una descripcion",
+                        1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "geografico"));
+                elementosPatrimonio.add(new ElementoPatrimonio("EPGeografico2", "Una descripcion",
+                        1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "geografico"));
 
                 Log.d("FIREBASE", "Elementos del patrimonio a insertar: " + elementosPatrimonio
                         .size());
