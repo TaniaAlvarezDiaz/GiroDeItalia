@@ -13,4 +13,8 @@
     <string name="Descripcion">Descripción:</string>
     <string name="Lugar">Lugar:</string>
     <string name="Etapa">Etapa:</string>
+    <string name="title_activity_nueva_patrimonio">NuevaPatrimonioActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
