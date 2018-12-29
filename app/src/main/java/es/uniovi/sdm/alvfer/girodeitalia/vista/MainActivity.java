@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Operaciones con la BBDD, colocarlas aquí para que se hagan antes de pulsar las
         // opciones de menú
-        FirebaseUtilidades.rellenarElementosPatrimonio();
+        //FirebaseUtilidades.rellenarElementosPatrimonio();
     }
 
     /**
