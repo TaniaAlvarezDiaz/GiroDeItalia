@@ -43,7 +43,10 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".vista.NuevaPatrimonioActivity"
-            android:label="@string/title_activity_nueva_patrimonio"></activity>
+            android:configChanges="orientation"
+            android:label="@string/title_activity_nueva_patrimonio"
+            android:parentActivityName=".vista.MainActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

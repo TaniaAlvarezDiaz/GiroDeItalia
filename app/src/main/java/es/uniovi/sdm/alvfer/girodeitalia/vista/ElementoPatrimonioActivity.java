@@ -2,6 +2,7 @@ package es.uniovi.sdm.alvfer.girodeitalia.vista;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,8 +39,11 @@ public class ElementoPatrimonioActivity extends AppCompatActivity {
                 ("ElementosPatrimonio");
 
         Bundle b = getIntent().getExtras();
-        ElementoPatrimonio elementoPatrimonio = b.getParcelable(PatrimonioActivity
-                .OBJETO_ELEMENTO_PATRIMONIO);
+        /*ElementoPatrimonio elementoPatrimonio = b.getParcelable(PatrimonioActivity
+                .OBJETO_ELEMENTO_PATRIMONIO);*/
+
+        ElementoPatrimonio elementoPatrimonio = b.getParcelable(NuevaPatrimonioActivity
+                .ELEMENTO_PATRIMONIO);
 
         String nombreImagen = elementoPatrimonio.getNombreImagen();
         StorageReference photoRef = elementosPatrimonioImagenesStorageReference.child(nombreImagen);
@@ -52,5 +56,9 @@ public class ElementoPatrimonioActivity extends AppCompatActivity {
         textViewDescripcion.setText("Descripción: " + elementoPatrimonio.getDescripcion());
         textViewLugar.setText("Lugar: " + elementoPatrimonio.getLugar());
         textViewEtapa.setText("Etapa: " + elementoPatrimonio.getEtapa());
+    }
+
+    public void verEnMapa(View view) {
+        // Crear y abrir la activity del mapa
     }
 }
