@@ -32,19 +32,13 @@
             android:parentActivityName=".vista.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".vista.PatrimonioActivity"
-            android:configChanges="orientation"
-            android:parentActivityName=".vista.MainActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".vista.ElementoPatrimonioActivity"
             android:configChanges="orientation"
             android:parentActivityName=".vista.PatrimonioActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".vista.NuevaPatrimonioActivity"
+            android:name=".vista.PatrimonioActivity"
             android:configChanges="orientation"
-            android:label="@string/title_activity_nueva_patrimonio"
             android:parentActivityName=".vista.MainActivity"
             android:screenOrientation="portrait" />
     </application>

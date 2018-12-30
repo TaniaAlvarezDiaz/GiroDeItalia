@@ -15,6 +15,8 @@ import es.uniovi.sdm.alvfer.girodeitalia.R;
 
 public class ElementoPatrimonioActivity extends AppCompatActivity {
 
+    public static final String ELEMENTO_PATRIMONIO = "ElementoPatrimonio";
+
     private TextView textViewNombre;
     private TextView textViewLugar;
     private TextView textViewDescripcion;
@@ -39,11 +41,8 @@ public class ElementoPatrimonioActivity extends AppCompatActivity {
                 ("ElementosPatrimonio");
 
         Bundle b = getIntent().getExtras();
-        /*ElementoPatrimonio elementoPatrimonio = b.getParcelable(PatrimonioActivity
-                .OBJETO_ELEMENTO_PATRIMONIO);*/
 
-        ElementoPatrimonio elementoPatrimonio = b.getParcelable(NuevaPatrimonioActivity
-                .ELEMENTO_PATRIMONIO);
+        ElementoPatrimonio elementoPatrimonio = b.getParcelable(ELEMENTO_PATRIMONIO);
 
         String nombreImagen = elementoPatrimonio.getNombreImagen();
         StorageReference photoRef = elementosPatrimonioImagenesStorageReference.child(nombreImagen);

@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import es.uniovi.sdm.alvfer.girodeitalia.datos.utilidades.FirebaseUtilidades;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.utilidades.ExpandableListAdapter;
 import es.uniovi.sdm.alvfer.girodeitalia.R;
 
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     if (listDataHeader.get(groupPosition).toString().equals("Recorrido general")) {
                         intent = new Intent(getApplicationContext(), RecorridoActivity.class);
                     } else if (listDataHeader.get(groupPosition).toString().equals("Patrimonio")) {
-                        intent = new Intent(getApplicationContext(), NuevaPatrimonioActivity.class);
+                        intent = new Intent(getApplicationContext(), PatrimonioActivity.class);
                     } else {
                         intent.putExtra(OPCION_ESCOGIDA, listDataHeader.get(groupPosition)
                                 .toString());

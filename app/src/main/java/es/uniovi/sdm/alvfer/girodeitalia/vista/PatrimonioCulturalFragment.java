@@ -17,14 +17,14 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
 
-public class PatrimonioHistoricoFragment extends ListFragment {
+public class PatrimonioCulturalFragment extends ListFragment {
 
-    private ArrayList<ElementoPatrimonio> elementosPatrimonioHistorico;
+    private ArrayList<ElementoPatrimonio> elementosPatrimonioCultural;
     private ArrayAdapter<ElementoPatrimonio> arrayAdapter;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference elementosPatrimonioDatabaseReference;
 
-    public PatrimonioHistoricoFragment() {
+    public PatrimonioCulturalFragment() {
         // Required empty public constructor
     }
 
@@ -34,16 +34,16 @@ public class PatrimonioHistoricoFragment extends ListFragment {
         firebaseDatabase = FirebaseDatabase.getInstance();
         elementosPatrimonioDatabaseReference = firebaseDatabase.getReference().child
                 ("ElementosPatrimonio");
-        elementosPatrimonioHistorico = new ArrayList<>();
+        elementosPatrimonioCultural = new ArrayList<>();
         arrayAdapter = new ArrayAdapter<>(getActivity(), android.R.layout
-                .simple_list_item_1, elementosPatrimonioHistorico);
+                .simple_list_item_1, elementosPatrimonioCultural);
         setListAdapter(arrayAdapter);
-        obtenerElementosPatrimonioHistorico();
+        obtenerElementosPatrimonioCultural();
     }
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        ElementoPatrimonio elementoPatrimonio = elementosPatrimonioHistorico.get(position);
+        ElementoPatrimonio elementoPatrimonio = elementosPatrimonioCultural.get(position);
         Intent intent = new Intent(getActivity().getApplicationContext(), ElementoPatrimonioActivity
                 .class);
         intent.putExtra(ElementoPatrimonioActivity.ELEMENTO_PATRIMONIO, elementoPatrimonio);
@@ -51,9 +51,9 @@ public class PatrimonioHistoricoFragment extends ListFragment {
     }
 
 
-    private void obtenerElementosPatrimonioHistorico() {
+    private void obtenerElementosPatrimonioCultural() {
         Query queryRef = elementosPatrimonioDatabaseReference.orderByChild("tipoPatrimonio")
-                .equalTo("historico");
+                .equalTo("cultural");
         queryRef.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
@@ -61,7 +61,7 @@ public class PatrimonioHistoricoFragment extends ListFragment {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     ElementoPatrimonio elementoPatrimonio = snapshot.getValue(ElementoPatrimonio
                             .class);
-                    elementosPatrimonioHistorico.add(elementoPatrimonio);
+                    elementosPatrimonioCultural.add(elementoPatrimonio);
                     arrayAdapter.notifyDataSetChanged();
                 }
             }
