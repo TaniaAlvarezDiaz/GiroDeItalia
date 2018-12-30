@@ -22,13 +22,6 @@ public class RecorridoActivity extends AppCompatActivity {
 
         PhotoView photoView = (PhotoView) findViewById(R.id.ivRecorrido);
 
-        //Comentar si se usa Glide
-        //photoView.setImageResource(R.drawable.mapa_recorrido);
-
-        //Glide.with(this).load(R.drawable.mapa_recorrido).into(photoView);
-        //Picasso.get().load(R.drawable.mapa_recorrido).into(photoView);
-
-
         firebaseStorage = FirebaseStorage.getInstance();
         mapaRecorridoImagenesStorageReference = firebaseStorage.getReference().child
                 ("MapaRecorrido");
