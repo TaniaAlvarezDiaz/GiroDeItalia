@@ -8,6 +8,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DecodeFormat;
 import com.bumptech.glide.request.RequestOptions;
 import com.github.chrisbanes.photoview.PhotoView;
+import com.squareup.picasso.Picasso;
 
 import es.uniovi.sdm.alvfer.girodeitalia.R;
 
@@ -22,6 +23,7 @@ public class RecorridoActivity extends AppCompatActivity {
         //Comentar si se usa Glide
         //photoView.setImageResource(R.drawable.mapa_recorrido);
 
-        Glide.with(this).load(R.drawable.mapa_recorrido).into(photoView);
+        //Glide.with(this).load(R.drawable.mapa_recorrido).into(photoView);
+        Picasso.get().load(R.drawable.mapa_recorrido).into(photoView);
     }
 }
