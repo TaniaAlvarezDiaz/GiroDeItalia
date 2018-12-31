@@ -17,5 +17,8 @@
     <string name="title_historico">Histórico</string>
     <string name="title_cultural">Cultural</string>
     <string name="title_geografico">Geografico</string>
+    <string name="title_datos">Datos</string>
+    <string name="title_patrimonio">Patrimonio</string>
     <string name="VerEnMapa">Ver en mapa</string>
+    <string name="title_activity_etapa">EtapaActivity</string>
 </resources>

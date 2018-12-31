@@ -1,5 +1,6 @@
 package es.uniovi.sdm.alvfer.girodeitalia.vista;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import es.uniovi.sdm.alvfer.girodeitalia.datos.utilidades.FirebaseUtilidades;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.utilidades.ExpandableListAdapter;
 import es.uniovi.sdm.alvfer.girodeitalia.R;
 
@@ -76,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), RecorridoActivity.class);
                     } else if (listDataHeader.get(groupPosition).toString().equals("Patrimonio")) {
                         intent = new Intent(getApplicationContext(), PatrimonioActivity.class);
+                    } else if (listDataHeader.get(groupPosition).toString().equals("Etapas")) {
+                        intent = new Intent(getApplicationContext(), EtapaActivity.class);
                     } else {
                         intent.putExtra(OPCION_ESCOGIDA, listDataHeader.get(groupPosition)
                                 .toString());
@@ -121,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Operaciones con la BBDD, colocarlas aquí para que se hagan antes de pulsar las
         // opciones de menú
-        //FirebaseUtilidades.rellenarElementosPatrimonio();
+        FirebaseUtilidades.rellenarElementosPatrimonio();
     }
 
     /**
