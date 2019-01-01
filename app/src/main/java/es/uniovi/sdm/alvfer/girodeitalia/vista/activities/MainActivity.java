@@ -75,10 +75,12 @@ public class MainActivity extends AppCompatActivity {
                 if (listDataChild.get(listDataHeader.get(groupPosition)).isEmpty()) {
                     if (listDataHeader.get(groupPosition).toString().equals("Recorrido general")) {
                         intent = new Intent(getApplicationContext(), RecorridoActivity.class);
-                    } else if (listDataHeader.get(groupPosition).toString().equals("Patrimonio")) {
-                        intent = new Intent(getApplicationContext(), PatrimonioActivity.class);
                     } else if (listDataHeader.get(groupPosition).toString().equals("Etapas")) {
                         intent = new Intent(getApplicationContext(), EtapasActivity.class);
+                    } else if (listDataHeader.get(groupPosition).toString().equals("Calendario")) {
+                        intent = new Intent(getApplicationContext(), CalendarioActivity.class);
+                    } else if (listDataHeader.get(groupPosition).toString().equals("Patrimonio")) {
+                        intent = new Intent(getApplicationContext(), PatrimonioActivity.class);
                     } else {
                         intent.putExtra(OPCION_ESCOGIDA, listDataHeader.get(groupPosition)
                                 .toString());
@@ -126,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
         // opciones de menú
         //FirebaseUtilidades.rellenarElementosPatrimonio();
         //FirebaseUtilidades.rellenarEtapas();
+        //FirebaseUtilidades.rellenarCalendario();
     }
 
     /**

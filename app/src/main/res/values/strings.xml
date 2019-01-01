@@ -25,4 +25,6 @@
     <string name="hello_blank_fragment">Información de la etapa</string>
     <string name="Recorrido">Recorrido</string>
     <string name="Perfil">Perfil</string>
+    <string name="FechaCalendario">11 Mayo</string>
+    <string name="Evento">Etapa 1</string>
 </resources>

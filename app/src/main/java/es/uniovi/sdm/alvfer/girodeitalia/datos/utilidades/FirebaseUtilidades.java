@@ -11,6 +11,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Dia;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Etapa;
 
@@ -23,6 +24,9 @@ public class FirebaseUtilidades {
     public static DatabaseReference etapasDatabaseReference = firebaseDatabase
             .getReference()
             .child("Etapas");
+    public static DatabaseReference calendarioDatabaseReference = firebaseDatabase
+            .getReference()
+            .child("Calendario");
 
     /**
      * Método para borrar todos los elementos del patrimonio que hay en la BBDD y volver a
@@ -79,33 +83,6 @@ public class FirebaseUtilidades {
                 // Siguientes elementos del patrimonio buscados por Pedro
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 // Elementos del patrimonio buscados por Tania
 
 
@@ -149,7 +126,7 @@ public class FirebaseUtilidades {
      */
     public static void rellenarEtapas() {
 
-        // Borrar los elementos del patrimonio de la BBDD
+        // Borrar las etapas de la BBDD
         Query queryRef = etapasDatabaseReference.orderByChild("salida");
         queryRef.addListenerForSingleValueEvent(new ValueEventListener() {
 
@@ -201,6 +178,72 @@ public class FirebaseUtilidades {
                 Log.d("FIREBASE", "Ha ocurrido un fallo.");
             }
         });
+    }
 
+    /**
+     * Método para borrar todas los dias del calendario que hay en la BBDD y volver a
+     * introducirlos
+     */
+    public static void rellenarCalendario() {
+
+        // Borrar los dias del calendariode la BBDD
+        Query queryRef = calendarioDatabaseReference.orderByChild("id");
+        queryRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int diasEliminados = 0;
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    snapshot.getRef().removeValue();
+                    diasEliminados++;
+                }
+                Log.d("FIREBASE", "Dias eliminados: " +
+                        diasEliminados);
+
+                // Crear los dias del calendario
+                ArrayList<Dia> dias = new ArrayList<>();
+                dias.add(new Dia(1, "11 de mayo", "Etapa 1"));
+                dias.add(new Dia(2, "12 de mayo", "Etapa 2"));
+                dias.add(new Dia(3, "13 de mayo", "Etapa 3"));
+                dias.add(new Dia(4, "14 de mayo", "Etapa 4"));
+                dias.add(new Dia(5, "15 de mayo", "Etapa 5"));
+                dias.add(new Dia(6, "16 de mayo", "Etapa 6"));
+                dias.add(new Dia(7, "17 de mayo", "Etapa 7"));
+                dias.add(new Dia(8, "18 de mayo", "Etapa 8"));
+                dias.add(new Dia(9, "19 de mayo", "Etapa 9"));
+                dias.add(new Dia(10, "20 de mayo", "Día de descanso"));
+                dias.add(new Dia(11, "21 de mayo", "Etapa 10"));
+                dias.add(new Dia(12, "22 de mayo", "Etapa 11"));
+                dias.add(new Dia(13, "23 de mayo", "Etapa 12"));
+                dias.add(new Dia(14, "24 de mayo", "Etapa 13"));
+                dias.add(new Dia(15, "25 de mayo", "Etapa 14"));
+                dias.add(new Dia(16, "26 de mayo", "Etapa 15"));
+                dias.add(new Dia(17, "27 de mayo", "Día de descanso"));
+                dias.add(new Dia(18, "28 de mayo", "Etapa 16"));
+                dias.add(new Dia(19, "29 de mayo", "Etapa 17"));
+                dias.add(new Dia(20, "30 de mayo", "Etapa 18"));
+                dias.add(new Dia(21, "31 de mayo", "Etapa 19"));
+                dias.add(new Dia(22, "01 de junio", "Etapa 20"));
+                dias.add(new Dia(23, "02 de junio", "Etapa 21"));
+
+
+                Log.d("FIREBASE", "Dias a insertar: " + dias
+                        .size());
+
+                // Introducir los elementos de las etapas en la BBDD
+                int diasInsertados = 0;
+                for (Dia d : dias) {
+                    calendarioDatabaseReference.push().setValue(d);
+                    diasInsertados++;
+                }
+                Log.d("FIREBASE", "Dias insertados: " +
+                        diasInsertados);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.d("FIREBASE", "Ha ocurrido un fallo.");
+            }
+        });
     }
 }
