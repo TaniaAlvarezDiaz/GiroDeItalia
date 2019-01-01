@@ -63,17 +63,17 @@ public class FirebaseUtilidades {
 
                 for (int i = 0; i < 40; i++) {
                     elementosPatrimonio.add(new ElementoPatrimonio("EPCultural" + i, "Una descripcion",
-                            1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "cultural"));
+                            1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "cultural",44.494576, 11.342587));
                 }
 
                 for (int i = 0; i < 40; i++) {
                     elementosPatrimonio.add(new ElementoPatrimonio("EPGeografico" + i, "Una descripcion",
-                            2, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "geografico"));
+                            2, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "geografico", 44.493142, 11.343105));
                 }
 
                 for (int i = 0; i < 40; i++) {
                     elementosPatrimonio.add(new ElementoPatrimonio("EPHistorico" + i, "Una descripcion",
-                            3, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "historico"));
+                            3, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "historico",44.783940, -10.885672));
                 }
                 /*
                 // Elementos del patrimonio inventados
@@ -148,7 +148,7 @@ public class FirebaseUtilidades {
                 Log.d("FIREBASE", "Etapas a insertar: " + etapas
                         .size());
 
-                // Introducir los elementos del patrimonio en la BBDD
+                // Introducir los elementos de las etapas en la BBDD
                 int etapasInsertadas = 0;
                 for (Etapa etapa : etapas) {
                     etapasDatabaseReference.push().setValue(etapa);

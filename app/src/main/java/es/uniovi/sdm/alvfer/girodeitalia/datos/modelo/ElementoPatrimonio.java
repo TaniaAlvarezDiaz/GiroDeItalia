@@ -11,16 +11,20 @@ public class ElementoPatrimonio implements Parcelable {
     private String lugar;
     private String nombreImagen;
     private String tipoPatrimonio;
+    private double latitud;
+    private double longitud;
 
 
     public ElementoPatrimonio(String nombre, String descripcion, int etapa, String lugar, String
-            nombreImagen, String tipoPatrimonio) {
+            nombreImagen, String tipoPatrimonio, double latitud, double longitud) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.etapa = etapa;
         this.lugar = lugar;
         this.nombreImagen = nombreImagen;
         this.tipoPatrimonio = tipoPatrimonio;
+        this.latitud = latitud;
+        this.longitud = longitud;
     }
 
     protected ElementoPatrimonio(Parcel in) {
@@ -30,6 +34,8 @@ public class ElementoPatrimonio implements Parcelable {
         this.lugar = in.readString();
         this.nombreImagen = in.readString();
         this.tipoPatrimonio = in.readString();
+        this.latitud = in.readDouble();
+        this.longitud = in.readDouble();
     }
 
     public ElementoPatrimonio() {
@@ -60,6 +66,8 @@ public class ElementoPatrimonio implements Parcelable {
         dest.writeString(getLugar());
         dest.writeString(getNombreImagen());
         dest.writeString(getTipoPatrimonio());
+        dest.writeDouble(getLatitud());
+        dest.writeDouble(getLongitud());
     }
 
     public String getNombre() {
@@ -85,6 +93,10 @@ public class ElementoPatrimonio implements Parcelable {
     public String getTipoPatrimonio() {
         return tipoPatrimonio;
     }
+
+    public double getLatitud() { return latitud; }
+
+    public double getLongitud() { return longitud; }
 
     @Override
     public String toString() {

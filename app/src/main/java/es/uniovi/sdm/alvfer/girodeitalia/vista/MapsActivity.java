@@ -1,7 +1,8 @@
 package es.uniovi.sdm.alvfer.girodeitalia.vista;
 
-import android.support.v4.app.FragmentActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -40,15 +41,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-       /* LatLng sydney = new LatLng(44.492952, 11.343128);
-        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));*/
+        Bundle b = getIntent().getExtras();
 
-        LatLng pos = new LatLng(44.492952, 11.343128);
+        LatLng pos = new LatLng(b.getDouble("latitud"), b.getDouble("longitud"));
         mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        mMap.addMarker(new MarkerOptions().position(pos));
+        mMap.addMarker(new MarkerOptions().position(pos).title(b.getString("nombre")))
+                .showInfoWindow();
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(pos, 17));
     }
 }
