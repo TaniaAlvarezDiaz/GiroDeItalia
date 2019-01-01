@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     } else if (listDataHeader.get(groupPosition).toString().equals("Patrimonio")) {
                         intent = new Intent(getApplicationContext(), PatrimonioActivity.class);
                     } else if (listDataHeader.get(groupPosition).toString().equals("Etapas")) {
-                        intent = new Intent(getApplicationContext(), EtapaActivity.class);
+                        intent = new Intent(getApplicationContext(), EtapasActivity.class);
                     } else {
                         intent.putExtra(OPCION_ESCOGIDA, listDataHeader.get(groupPosition)
                                 .toString());
@@ -125,7 +125,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Operaciones con la BBDD, colocarlas aquí para que se hagan antes de pulsar las
         // opciones de menú
-        FirebaseUtilidades.rellenarElementosPatrimonio();
+        //FirebaseUtilidades.rellenarElementosPatrimonio();
+        //FirebaseUtilidades.rellenarEtapas();
     }
 
     /**

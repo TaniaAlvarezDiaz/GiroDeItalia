@@ -8,26 +8,36 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import es.uniovi.sdm.alvfer.girodeitalia.R;
+import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
+import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Etapa;
 
 public class EtapaActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
+    public static final String ETAPA = "Etapa";
+
+    private Etapa etapa;
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Bundle arguments = new Bundle();
+            arguments.putParcelable(ETAPA, etapa);
             switch (item.getItemId()) {
                 case R.id.navigation_datos:
-                    mTextMessage.setText(R.string.title_datos);
+                    InformacionEtapaFragment informacionEtapaFragment = new InformacionEtapaFragment();
+                    informacionEtapaFragment.setArguments(arguments);
+                    getSupportFragmentManager().beginTransaction().replace(R.id
+                            .etapa_fragment_container, informacionEtapaFragment).commit();
                     return true;
                 case R.id.navigation_patrimonio:
-                    mTextMessage.setText(R.string.title_patrimonio);
+                    ElementosPatrimonioEtapaFragment elementosPatrimonioEtapaFragment = new ElementosPatrimonioEtapaFragment();
+                    elementosPatrimonioEtapaFragment.setArguments(arguments);
+                    getSupportFragmentManager().beginTransaction().replace(R.id
+                            .etapa_fragment_container, elementosPatrimonioEtapaFragment).commit();
                     return true;
-                /*case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;*/
             }
             return false;
         }
@@ -38,7 +48,16 @@ public class EtapaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_etapa);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+        Bundle b = getIntent().getExtras();
+        this.etapa = b.getParcelable(ETAPA);
+
+        InformacionEtapaFragment informacionEtapaFragment = new InformacionEtapaFragment();
+        Bundle arguments = new Bundle();
+        arguments.putParcelable(ETAPA, etapa);
+        informacionEtapaFragment.setArguments(arguments);
+        getSupportFragmentManager().beginTransaction().replace(R.id
+                .etapa_fragment_container, informacionEtapaFragment).commit();
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigationActivityEtapa);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }

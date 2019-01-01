@@ -12,6 +12,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
+import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Etapa;
 
 public class FirebaseUtilidades {
 
@@ -19,6 +20,9 @@ public class FirebaseUtilidades {
     public static DatabaseReference elementosPatrimonioDatabaseReference = firebaseDatabase
             .getReference()
             .child("ElementosPatrimonio");
+    public static DatabaseReference etapasDatabaseReference = firebaseDatabase
+            .getReference()
+            .child("Etapas");
 
     /**
      * Método para borrar todos los elementos del patrimonio que hay en la BBDD y volver a
@@ -64,12 +68,12 @@ public class FirebaseUtilidades {
 
                 for (int i = 0; i < 40; i++) {
                     elementosPatrimonio.add(new ElementoPatrimonio("EPGeografico" + i, "Una descripcion",
-                            1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "geografico"));
+                            2, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "geografico"));
                 }
 
                 for (int i = 0; i < 40; i++) {
                     elementosPatrimonio.add(new ElementoPatrimonio("EPHistorico" + i, "Una descripcion",
-                            1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "historico"));
+                            3, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "historico"));
                 }
                 /*
                 // Elementos del patrimonio inventados
@@ -93,6 +97,65 @@ public class FirebaseUtilidades {
                 }
                 Log.d("FIREBASE", "Elementos del patrimonio insertados: " +
                         elementosPatrimonioInsertados);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.d("FIREBASE", "Ha ocurrido un fallo.");
+            }
+        });
+
+    }
+
+
+    /**
+     * Método para borrar todas las etapas que hay en la BBDD y volver a
+     * introducirlas
+     */
+    public static void rellenarEtapas() {
+
+        // Borrar los elementos del patrimonio de la BBDD
+        Query queryRef = etapasDatabaseReference.orderByChild("salida");
+        queryRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int etapasEliminadas = 0;
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    snapshot.getRef().removeValue();
+                    etapasEliminadas++;
+                }
+                Log.d("FIREBASE", "Etapas elimindas: " +
+                        etapasEliminadas);
+
+                // Crear las etapas
+                // https://es.wikipedia.org/wiki/Giro_de_Italia_2019#Clasificaciones_finales
+                // Hay 3 contrarrelojes individuales, en las etapas 1, 9 y 21
+                ArrayList<Etapa> etapas = new ArrayList<>();
+                etapas.add(new Etapa("Bologna", "Bologna (San Luca)", "contrarreloj individual", 1, 8, "11-Mayo"));
+                etapas.add(new Etapa("Bologna", "Fucecchio", "media montaña", 2, 200, "12-Mayo"));
+                etapas.add(new Etapa("Vinci", "Orbetello", "media montaña", 3, 219, "13-Mayo"));
+                etapas.add(new Etapa("Orbetello", "Frascati", "media montaña", 4, 228, "14-Mayo"));
+                etapas.add(new Etapa("Frascati", "Terracina", "llana", 5, 140, "15-Mayo"));
+                etapas.add(new Etapa("Cassino", "San Giovanni Rotondo", "media montaña", 6, 233, "16-Mayo"));
+                etapas.add(new Etapa("Vasto", "L'Aquila", "media montaña", 7, 180, "17-Mayo"));
+                etapas.add(new Etapa("Tortoreto Lido", "Pesaro", "media montaña", 8, 235, "18-Mayo"));
+                etapas.add(new Etapa("Riccione", "San Marino", "contrarreloj individual", 9, 35, "19-Mayo"));
+                etapas.add(new Etapa("Ravenna", "Modena", "llana", 10, 147, "21-Mayo"));
+
+
+
+                Log.d("FIREBASE", "Etapas a insertar: " + etapas
+                        .size());
+
+                // Introducir los elementos del patrimonio en la BBDD
+                int etapasInsertadas = 0;
+                for (Etapa etapa : etapas) {
+                    etapasDatabaseReference.push().setValue(etapa);
+                    etapasInsertadas++;
+                }
+                Log.d("FIREBASE", "Etapas insertadas: " +
+                        etapasInsertadas);
             }
 
             @Override

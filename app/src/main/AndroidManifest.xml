@@ -12,7 +12,6 @@
         <activity
             android:name=".vista.MainActivity"
             android:configChanges="orientation"
-            android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -34,17 +33,21 @@
         <activity
             android:name=".vista.ElementoPatrimonioActivity"
             android:configChanges="orientation"
-            android:parentActivityName=".vista.PatrimonioActivity"
+            android:parentActivityName=".vista.MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".vista.PatrimonioActivity"
             android:configChanges="orientation"
             android:parentActivityName=".vista.MainActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".vista.EtapasActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".vista.MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".vista.EtapaActivity"
             android:configChanges="orientation"
-            android:parentActivityName=".vista.MainActivity"
+            android:parentActivityName=".vista.EtapasActivity"
             android:screenOrientation="portrait" />
     </application>
 
