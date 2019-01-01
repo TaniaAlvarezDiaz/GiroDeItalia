@@ -1,5 +1,6 @@
 package es.uniovi.sdm.alvfer.girodeitalia.vista;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -25,6 +26,7 @@ public class ElementoPatrimonioActivity extends AppCompatActivity {
     private FirebaseStorage firebaseStorage;
     private StorageReference elementosPatrimonioImagenesStorageReference;
 
+    private ElementoPatrimonio elementoPatrimonio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,7 @@ public class ElementoPatrimonioActivity extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
 
-        ElementoPatrimonio elementoPatrimonio = b.getParcelable(ELEMENTO_PATRIMONIO);
+        elementoPatrimonio = b.getParcelable(ELEMENTO_PATRIMONIO);
 
         String nombreImagen = elementoPatrimonio.getNombreImagen();
         StorageReference photoRef = elementosPatrimonioImagenesStorageReference.child(nombreImagen);
@@ -59,5 +61,10 @@ public class ElementoPatrimonioActivity extends AppCompatActivity {
 
     public void verEnMapa(View view) {
         // Crear y abrir la activity del mapa
+        Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+        intent.putExtra("nombre", elementoPatrimonio.getNombre());
+        intent.putExtra("latitud", elementoPatrimonio.getLatitud());
+        intent.putExtra("longitud", elementoPatrimonio.getLongitud());
+        startActivity(intent);
     }
 }

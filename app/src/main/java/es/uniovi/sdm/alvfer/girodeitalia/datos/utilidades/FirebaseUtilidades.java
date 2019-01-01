@@ -51,7 +51,7 @@ public class FirebaseUtilidades {
                         "de San Petronio es la iglesia más antigua y grande de Bologna, y una de " +
                         "las más " +
                         "grandes del mundo.", 1, "Bologna", "BasilicaDeSanPetronio.jpg",
-                        "historico")); // 44.493204, 11.343118
+                        "historico", 44.493204, 11.343118));
                 elementosPatrimonio.add(new ElementoPatrimonio("Torres de los Asinelli y " +
                         "Garisenda", "En " +
                         "el pasado la ciudad de Bologna tenía varias torres con funciones de " +
@@ -59,42 +59,57 @@ public class FirebaseUtilidades {
                         "señalización. Hoy en día solo quedan unas veinte, de las cuales las más " +
                         "famosas " +
                         "son estas dos.", 1, "Bologna", "TorresDeLosAsinelliYGarisenda.jpg",
-                        "historico")); // 44.494236, 11.346732
+                        "historico", 44.494236, 11.346732));
                 elementosPatrimonio.add(new ElementoPatrimonio("Santuario de San Luca", "El " +
                         "santuario de Nuestra Señora de San Luca, ubicado sobre la cima del Colle" +
                         " della Guardia, está dedicado al culto católico mariano y es la meta de " +
                         "una gran cantidad de peregrinos todos los años.", 1, "Bologna",
-                        "SantuarioDeSanLuca.jpg", "historico")); // 44.479322, 11.298053
+                        "SantuarioDeSanLuca.jpg", "historico", 44.479322, 11.298053));
                 elementosPatrimonio.add(new ElementoPatrimonio("Pinacoteca Nacional de Bologna",
                         "La Pinacoteca Nacional de Bologna es uno de los museos más importantes y" +
                                 " relevantes de Italia. Entre sus obras más importantes está la " +
                                 "colección de pinturas de los Carracci y sus seguidores ", 1,
                         "Bologna",
-                        "PinacotecaNacionalDeBologna.jpg", "cultural")); // 44.497952, 11.353498
-                elementosPatrimonio.add(new ElementoPatrimonio("Plaza de los Leones", "Esta plaza" +
+                        "PinacotecaNacionalDeBologna.jpg", "cultural", 44.497952, 11.353498));
+                /*elementosPatrimonio.add(new ElementoPatrimonio("Plaza de los Leones", "Esta plaza" +
                         " es la más importante de la ciudad e Empoli. Debe su nombre a la fuente " +
                         "que se encuentra en su centro, la cual está adornada con leones, data de" +
                         " 1827 y es obra de Luigi Pampaloni.", 2, "Empoli", "PlazaDeLosLeones" +
-                        ".jpg", "cultural"));
+                        ".jpg", "cultural"));*/
+                // Siguientes elementos del patrimonio buscados por Pedro
 
 
-                for (int i = 0; i < 40; i++) {
-                    elementosPatrimonio.add(new ElementoPatrimonio("EPCultural" + i, "Una " +
-                            "descripcion",
-                            1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "cultural"));
-                }
 
-                for (int i = 0; i < 40; i++) {
-                    elementosPatrimonio.add(new ElementoPatrimonio("EPGeografico" + i, "Una " +
-                            "descripcion",
-                            2, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "geografico"));
-                }
 
-                for (int i = 0; i < 40; i++) {
-                    elementosPatrimonio.add(new ElementoPatrimonio("EPHistorico" + i, "Una " +
-                            "descripcion",
-                            3, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "historico"));
-                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                // Elementos del patrimonio buscados por Tania
+
+
+
                 /*
                 // Elementos del patrimonio inventados
                 elementosPatrimonio.add(new ElementoPatrimonio("EPCultural1", "Una descripcion",
@@ -171,7 +186,7 @@ public class FirebaseUtilidades {
                 Log.d("FIREBASE", "Etapas a insertar: " + etapas
                         .size());
 
-                // Introducir los elementos del patrimonio en la BBDD
+                // Introducir los elementos de las etapas en la BBDD
                 int etapasInsertadas = 0;
                 for (Etapa etapa : etapas) {
                     etapasDatabaseReference.push().setValue(etapa);
