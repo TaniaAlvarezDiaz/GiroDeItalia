@@ -40,6 +40,8 @@ public class InformacionEtapaFragment extends Fragment {
         super.onStart();
         TextView textViewPrueba = getActivity().findViewById(R.id.textViewPrueba);
         textViewPrueba.setText(etapa.toString());
+        TextView textViewPrueba2 = getActivity().findViewById(R.id.textViewPrueba2);
+        textViewPrueba2.setText(etapa.toString());
     }
 
 }
