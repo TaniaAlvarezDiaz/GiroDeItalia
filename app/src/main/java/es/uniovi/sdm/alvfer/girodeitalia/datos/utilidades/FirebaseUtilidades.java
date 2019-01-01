@@ -132,16 +132,16 @@ public class FirebaseUtilidades {
                 // https://es.wikipedia.org/wiki/Giro_de_Italia_2019#Clasificaciones_finales
                 // Hay 3 contrarrelojes individuales, en las etapas 1, 9 y 21
                 ArrayList<Etapa> etapas = new ArrayList<>();
-                etapas.add(new Etapa("Bologna", "Bologna (San Luca)", "contrarreloj individual", 1, 8, "11-Mayo"));
-                etapas.add(new Etapa("Bologna", "Fucecchio", "media montaña", 2, 200, "12-Mayo"));
-                etapas.add(new Etapa("Vinci", "Orbetello", "media montaña", 3, 219, "13-Mayo"));
-                etapas.add(new Etapa("Orbetello", "Frascati", "media montaña", 4, 228, "14-Mayo"));
-                etapas.add(new Etapa("Frascati", "Terracina", "llana", 5, 140, "15-Mayo"));
-                etapas.add(new Etapa("Cassino", "San Giovanni Rotondo", "media montaña", 6, 233, "16-Mayo"));
-                etapas.add(new Etapa("Vasto", "L'Aquila", "media montaña", 7, 180, "17-Mayo"));
-                etapas.add(new Etapa("Tortoreto Lido", "Pesaro", "media montaña", 8, 235, "18-Mayo"));
-                etapas.add(new Etapa("Riccione", "San Marino", "contrarreloj individual", 9, 35, "19-Mayo"));
-                etapas.add(new Etapa("Ravenna", "Modena", "llana", 10, 147, "21-Mayo"));
+                etapas.add(new Etapa("Bologna", "Bologna (San Luca)", "Contrarreloj individual", 1, 8, "11-Mayo"));
+                etapas.add(new Etapa("Bologna", "Fucecchio", "Media montaña", 2, 200, "12-Mayo"));
+                etapas.add(new Etapa("Vinci", "Orbetello", "Media montaña", 3, 219, "13-Mayo"));
+                etapas.add(new Etapa("Orbetello", "Frascati", "Media montaña", 4, 228, "14-Mayo"));
+                etapas.add(new Etapa("Frascati", "Terracina", "Llana", 5, 140, "15-Mayo"));
+                etapas.add(new Etapa("Cassino", "San Giovanni Rotondo", "Media montaña", 6, 233, "16-Mayo"));
+                etapas.add(new Etapa("Vasto", "L'Aquila", "Media montaña", 7, 180, "17-Mayo"));
+                etapas.add(new Etapa("Tortoreto Lido", "Pesaro", "Media montaña", 8, 235, "18-Mayo"));
+                etapas.add(new Etapa("Riccione", "San Marino", "Contrarreloj individual", 9, 35, "19-Mayo"));
+                etapas.add(new Etapa("Ravenna", "Modena", "Llana", 10, 147, "21-Mayo"));
 
 
 

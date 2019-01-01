@@ -25,7 +25,7 @@ public class EtapaAdapter extends RecyclerView.Adapter<EtapaAdapter.MyViewHolder
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            numero = itemView.findViewById(R.id.textViewNumeroEtapa);
+            numero = itemView.findViewById(R.id.textViewNumero);
             tipo = itemView.findViewById(R.id.textViewTipoEtapa);
             kilometros = itemView.findViewById(R.id.textViewKilometrosEtapa);
         }

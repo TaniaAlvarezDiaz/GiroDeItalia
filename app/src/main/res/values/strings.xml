@@ -22,4 +22,6 @@
     <string name="VerEnMapa">Ver en mapa</string>
     <string name="title_activity_etapa">EtapaActivity</string>
     <string name="hello_blank_fragment">Información de la etapa</string>
+    <string name="Recorrido">Recorrido</string>
+    <string name="Perfil">Perfil</string>
 </resources>

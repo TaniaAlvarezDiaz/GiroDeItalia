@@ -7,7 +7,7 @@ public class Etapa implements Parcelable {
 
     private String salida;
     private String meta;
-    private String tipo; // llana (*), media montaña (**, ***), alta montaña (****, *****) o contrarreloj individual
+    private String tipo; // Llana (*), Media montaña (**, ***), Alta montaña (****, *****) o Contrarreloj individual
     private int numero;
     private int kilometros;
     private String fecha; // dia-mes, Ej: 14-Mayo
