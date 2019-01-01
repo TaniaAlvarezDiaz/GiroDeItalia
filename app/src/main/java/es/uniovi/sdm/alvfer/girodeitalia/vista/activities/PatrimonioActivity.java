@@ -1,4 +1,4 @@
-package es.uniovi.sdm.alvfer.girodeitalia.vista;
+package es.uniovi.sdm.alvfer.girodeitalia.vista.activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -6,6 +6,9 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import es.uniovi.sdm.alvfer.girodeitalia.R;
+import es.uniovi.sdm.alvfer.girodeitalia.vista.fragments.PatrimonioCulturalFragment;
+import es.uniovi.sdm.alvfer.girodeitalia.vista.fragments.PatrimonioGeograficoFragment;
+import es.uniovi.sdm.alvfer.girodeitalia.vista.fragments.PatrimonioHistoricoFragment;
 
 
 public class PatrimonioActivity extends AppCompatActivity {

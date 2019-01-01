@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".vista.MainActivity"
+            android:name=".vista.activities.MainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -28,33 +28,33 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".vista.MainActivity2"
+            android:name=".vista.activities.MainActivity2"
             android:configChanges="orientation"
-            android:parentActivityName=".vista.MainActivity"
+            android:parentActivityName=".vista.activities.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".vista.RecorridoActivity"
+            android:name=".vista.activities.RecorridoActivity"
             android:configChanges="orientation"
-            android:parentActivityName=".vista.MainActivity"
+            android:parentActivityName=".vista.activities.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".vista.ElementoPatrimonioActivity"
+            android:name=".vista.activities.ElementoPatrimonioActivity"
             android:configChanges="orientation"
-            android:parentActivityName=".vista.MainActivity"
+            android:parentActivityName=".vista.activities.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".vista.PatrimonioActivity"
+            android:name=".vista.activities.PatrimonioActivity"
             android:configChanges="orientation"
-            android:parentActivityName=".vista.MainActivity"
+            android:parentActivityName=".vista.activities.MainActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".vista.EtapasActivity"
+        <activity android:name=".vista.activities.EtapasActivity"
             android:configChanges="orientation"
-            android:parentActivityName=".vista.MainActivity"
+            android:parentActivityName=".vista.activities.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".vista.EtapaActivity"
+            android:name=".vista.activities.EtapaActivity"
             android:configChanges="orientation"
-            android:parentActivityName=".vista.EtapasActivity"
+            android:parentActivityName=".vista.activities.EtapasActivity"
             android:screenOrientation="portrait" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -69,7 +69,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".vista.MapsActivity"
+            android:name=".vista.activities.MapsActivity"
             android:label="@string/title_activity_maps"></activity>
     </application>
 

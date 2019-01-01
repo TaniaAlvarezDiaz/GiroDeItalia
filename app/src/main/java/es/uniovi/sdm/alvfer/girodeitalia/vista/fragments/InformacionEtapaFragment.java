@@ -1,4 +1,4 @@
-package es.uniovi.sdm.alvfer.girodeitalia.vista;
+package es.uniovi.sdm.alvfer.girodeitalia.vista.fragments;
 
 
 import android.os.Bundle;
@@ -16,6 +16,7 @@ import com.google.firebase.storage.StorageReference;
 
 import es.uniovi.sdm.alvfer.girodeitalia.R;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Etapa;
+import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.EtapaActivity;
 
 
 public class InformacionEtapaFragment extends Fragment {

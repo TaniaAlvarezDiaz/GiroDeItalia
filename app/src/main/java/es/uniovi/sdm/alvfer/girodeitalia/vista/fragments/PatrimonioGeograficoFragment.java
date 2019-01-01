@@ -1,4 +1,4 @@
-package es.uniovi.sdm.alvfer.girodeitalia.vista;
+package es.uniovi.sdm.alvfer.girodeitalia.vista.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
+import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.ElementoPatrimonioActivity;
 
 public class PatrimonioGeograficoFragment extends ListFragment {
 

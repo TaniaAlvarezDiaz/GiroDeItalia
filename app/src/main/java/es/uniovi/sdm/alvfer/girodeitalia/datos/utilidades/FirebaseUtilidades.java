@@ -70,7 +70,7 @@ public class FirebaseUtilidades {
                                 " relevantes de Italia. Entre sus obras más importantes está la " +
                                 "colección de pinturas de los Carracci y sus seguidores ", 1,
                         "Bologna",
-                        "PinacotecaNacionalDeBologna.jpg", "cultural", 44.497952, 11.353498));
+                        "PinacotecaNacionalDeBologna.jpeg", "cultural", 44.497952, 11.353498));
                 /*elementosPatrimonio.add(new ElementoPatrimonio("Plaza de los Leones", "Esta plaza" +
                         " es la más importante de la ciudad e Empoli. Debe su nombre a la fuente " +
                         "que se encuentra en su centro, la cual está adornada con leones, data de" +

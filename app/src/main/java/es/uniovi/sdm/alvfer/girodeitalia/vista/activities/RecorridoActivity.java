@@ -1,4 +1,4 @@
-package es.uniovi.sdm.alvfer.girodeitalia.vista;
+package es.uniovi.sdm.alvfer.girodeitalia.vista.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

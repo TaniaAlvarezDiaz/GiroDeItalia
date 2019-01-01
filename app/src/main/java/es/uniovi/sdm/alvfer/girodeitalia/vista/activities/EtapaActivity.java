@@ -1,15 +1,15 @@
-package es.uniovi.sdm.alvfer.girodeitalia.vista;
+package es.uniovi.sdm.alvfer.girodeitalia.vista.activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import es.uniovi.sdm.alvfer.girodeitalia.R;
-import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Etapa;
+import es.uniovi.sdm.alvfer.girodeitalia.vista.fragments.ElementosPatrimonioEtapaFragment;
+import es.uniovi.sdm.alvfer.girodeitalia.vista.fragments.InformacionEtapaFragment;
 
 public class EtapaActivity extends AppCompatActivity {
 
