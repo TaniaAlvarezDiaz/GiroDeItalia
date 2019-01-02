@@ -11,6 +11,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Dia;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Etapa;
 
@@ -23,6 +24,9 @@ public class FirebaseUtilidades {
     public static DatabaseReference etapasDatabaseReference = firebaseDatabase
             .getReference()
             .child("Etapas");
+    public static DatabaseReference calendarioDatabaseReference = firebaseDatabase
+            .getReference()
+            .child("Calendario");
 
     /**
      * Método para borrar todos los elementos del patrimonio que hay en la BBDD y volver a
@@ -240,7 +244,7 @@ public class FirebaseUtilidades {
      */
     public static void rellenarEtapas() {
 
-        // Borrar los elementos del patrimonio de la BBDD
+        // Borrar las etapas de la BBDD
         Query queryRef = etapasDatabaseReference.orderByChild("salida");
         queryRef.addListenerForSingleValueEvent(new ValueEventListener() {
 
@@ -258,21 +262,48 @@ public class FirebaseUtilidades {
                 // https://es.wikipedia.org/wiki/Giro_de_Italia_2019#Clasificaciones_finales
                 // Hay 3 contrarrelojes individuales, en las etapas 1, 9 y 21
                 ArrayList<Etapa> etapas = new ArrayList<>();
-                etapas.add(new Etapa("Bologna", "Bologna (San Luca)", "Contrarreloj individual",
-                        1, 8, "11-Mayo"));
-                etapas.add(new Etapa("Bologna", "Fucecchio", "Media montaña", 2, 200, "12-Mayo"));
-                etapas.add(new Etapa("Vinci", "Orbetello", "Media montaña", 3, 219, "13-Mayo"));
-                etapas.add(new Etapa("Orbetello", "Frascati", "Media montaña", 4, 228, "14-Mayo"));
-                etapas.add(new Etapa("Frascati", "Terracina", "Llana", 5, 140, "15-Mayo"));
-                etapas.add(new Etapa("Cassino", "San Giovanni Rotondo", "Media montaña", 6, 233,
-                        "16-Mayo"));
-                etapas.add(new Etapa("Vasto", "L'Aquila", "Media montaña", 7, 180, "17-Mayo"));
-                etapas.add(new Etapa("Tortoreto Lido", "Pesaro", "Media montaña", 8, 235,
-                        "18-Mayo"));
-                etapas.add(new Etapa("Riccione", "San Marino", "Contrarreloj individual", 9, 35,
-                        "19-Mayo"));
-                etapas.add(new Etapa("Ravenna", "Modena", "Llana", 10, 147, "21-Mayo"));
-
+                etapas.add(new Etapa("Bologna", "Bologna (San Luca)",
+                        "Contrarreloj individual", 1, 8, "11-Mayo"));
+                etapas.add(new Etapa("Bologna", "Fucecchio", "Media montaña",
+                        2, 200, "12-Mayo"));
+                etapas.add(new Etapa("Vinci", "Orbetello", "Media montaña",
+                        3, 219, "13-Mayo"));
+                etapas.add(new Etapa("Orbetello", "Frascati", "Media montaña",
+                        4, 228, "14-Mayo"));
+                etapas.add(new Etapa("Frascati", "Terracina", "Llana", 5,
+                        140, "15-Mayo"));
+                etapas.add(new Etapa("Cassino", "San Giovanni Rotondo",
+                        "Media montaña", 6, 233, "16-Mayo"));
+                etapas.add(new Etapa("Vasto", "L'Aquila", "Media montaña",
+                        7, 180, "17-Mayo"));
+                etapas.add(new Etapa("Tortoreto Lido", "Pesaro", "Media montaña",
+                        8, 235, "18-Mayo"));
+                etapas.add(new Etapa("Riccione", "San Marino",
+                        "Contrarreloj individual", 9, 35, "19-Mayo"));
+                etapas.add(new Etapa("Ravenna", "Modena", "Llana",
+                        10, 147, "21-Mayo"));
+                etapas.add(new Etapa("Carpi", "Novi Ligure", "Llana", 11,
+                        206, "22-Mayo"));
+                etapas.add(new Etapa("Cuneo", "Pinerolo", "Media montaña",
+                        12, 146, "23-Mayo"));
+                etapas.add(new Etapa("Pinerolo", "Ceresole Reale (Lago Serrú)",
+                        "Alta montaña", 13, 188, "24-Mayo"));
+                etapas.add(new Etapa("Saint-Vincent", "Courmayeur (Skyway Monte Bianco",
+                        "Alta montaña", 14, 131, "25-Mayo"));
+                etapas.add(new Etapa("Ivrea", "Como", "Alta montaña", 15,
+                        237, "26-Mayo"));
+                etapas.add(new Etapa("Lovere", "Ponte di Legno", "Alta montaña",
+                        16, 226, "28-Mayo"));
+                etapas.add(new Etapa("Commezzadura (Val di Sole)", "Anterselva/Antholz",
+                        "Media montaña", 17, 180, "29-Mayo"));
+                etapas.add(new Etapa("Valdaora/Olang", "Santa Maria di Sala",
+                        "Llana", 18, 220, "30-Mayo"));
+                etapas.add(new Etapa("Treviso", "San Martino di Castrozza",
+                        "Media montaña", 19, 151, "31-Mayo"));
+                etapas.add(new Etapa("Feltre", "Croce d'Aune-Monte Avena",
+                        "Alta montaña", 20, 193, "01-Junio"));
+                etapas.add(new Etapa("Verona", "Verona", "Contrarreloj individual",
+                        21, 16, "02-Junio"));
 
                 Log.d("FIREBASE", "Etapas a insertar: " + etapas
                         .size());
@@ -292,6 +323,72 @@ public class FirebaseUtilidades {
                 Log.d("FIREBASE", "Ha ocurrido un fallo.");
             }
         });
+    }
 
+    /**
+     * Método para borrar todas los dias del calendario que hay en la BBDD y volver a
+     * introducirlos
+     */
+    public static void rellenarCalendario() {
+
+        // Borrar los dias del calendariode la BBDD
+        Query queryRef = calendarioDatabaseReference.orderByChild("id");
+        queryRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int diasEliminados = 0;
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    snapshot.getRef().removeValue();
+                    diasEliminados++;
+                }
+                Log.d("FIREBASE", "Dias eliminados: " +
+                        diasEliminados);
+
+                // Crear los dias del calendario
+                ArrayList<Dia> dias = new ArrayList<>();
+                dias.add(new Dia(1, "11 de mayo", "Etapa 1"));
+                dias.add(new Dia(2, "12 de mayo", "Etapa 2"));
+                dias.add(new Dia(3, "13 de mayo", "Etapa 3"));
+                dias.add(new Dia(4, "14 de mayo", "Etapa 4"));
+                dias.add(new Dia(5, "15 de mayo", "Etapa 5"));
+                dias.add(new Dia(6, "16 de mayo", "Etapa 6"));
+                dias.add(new Dia(7, "17 de mayo", "Etapa 7"));
+                dias.add(new Dia(8, "18 de mayo", "Etapa 8"));
+                dias.add(new Dia(9, "19 de mayo", "Etapa 9"));
+                dias.add(new Dia(10, "20 de mayo", "Día de descanso"));
+                dias.add(new Dia(11, "21 de mayo", "Etapa 10"));
+                dias.add(new Dia(12, "22 de mayo", "Etapa 11"));
+                dias.add(new Dia(13, "23 de mayo", "Etapa 12"));
+                dias.add(new Dia(14, "24 de mayo", "Etapa 13"));
+                dias.add(new Dia(15, "25 de mayo", "Etapa 14"));
+                dias.add(new Dia(16, "26 de mayo", "Etapa 15"));
+                dias.add(new Dia(17, "27 de mayo", "Día de descanso"));
+                dias.add(new Dia(18, "28 de mayo", "Etapa 16"));
+                dias.add(new Dia(19, "29 de mayo", "Etapa 17"));
+                dias.add(new Dia(20, "30 de mayo", "Etapa 18"));
+                dias.add(new Dia(21, "31 de mayo", "Etapa 19"));
+                dias.add(new Dia(22, "01 de junio", "Etapa 20"));
+                dias.add(new Dia(23, "02 de junio", "Etapa 21"));
+
+
+                Log.d("FIREBASE", "Dias a insertar: " + dias
+                        .size());
+
+                // Introducir los elementos de las etapas en la BBDD
+                int diasInsertados = 0;
+                for (Dia d : dias) {
+                    calendarioDatabaseReference.push().setValue(d);
+                    diasInsertados++;
+                }
+                Log.d("FIREBASE", "Dias insertados: " +
+                        diasInsertados);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.d("FIREBASE", "Ha ocurrido un fallo.");
+            }
+        });
     }
 }

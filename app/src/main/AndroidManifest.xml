@@ -47,7 +47,8 @@
             android:configChanges="orientation"
             android:parentActivityName=".vista.activities.MainActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".vista.activities.EtapasActivity"
+        <activity
+            android:name=".vista.activities.EtapasActivity"
             android:configChanges="orientation"
             android:parentActivityName=".vista.activities.MainActivity"
             android:screenOrientation="portrait" />
@@ -56,6 +57,11 @@
             android:configChanges="orientation"
             android:parentActivityName=".vista.activities.EtapasActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".vista.activities.CalendarioActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".vista.activities.MainActivity"
+            android:screenOrientation="portrait"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -70,7 +76,7 @@
 
         <activity
             android:name=".vista.activities.MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
     </application>
 
 </manifest>
