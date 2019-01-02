@@ -144,21 +144,48 @@ public class FirebaseUtilidades {
                 // https://es.wikipedia.org/wiki/Giro_de_Italia_2019#Clasificaciones_finales
                 // Hay 3 contrarrelojes individuales, en las etapas 1, 9 y 21
                 ArrayList<Etapa> etapas = new ArrayList<>();
-                etapas.add(new Etapa("Bologna", "Bologna (San Luca)", "Contrarreloj individual",
-                        1, 8, "11-Mayo"));
-                etapas.add(new Etapa("Bologna", "Fucecchio", "Media montaña", 2, 200, "12-Mayo"));
-                etapas.add(new Etapa("Vinci", "Orbetello", "Media montaña", 3, 219, "13-Mayo"));
-                etapas.add(new Etapa("Orbetello", "Frascati", "Media montaña", 4, 228, "14-Mayo"));
-                etapas.add(new Etapa("Frascati", "Terracina", "Llana", 5, 140, "15-Mayo"));
-                etapas.add(new Etapa("Cassino", "San Giovanni Rotondo", "Media montaña", 6, 233,
-                        "16-Mayo"));
-                etapas.add(new Etapa("Vasto", "L'Aquila", "Media montaña", 7, 180, "17-Mayo"));
-                etapas.add(new Etapa("Tortoreto Lido", "Pesaro", "Media montaña", 8, 235,
-                        "18-Mayo"));
-                etapas.add(new Etapa("Riccione", "San Marino", "Contrarreloj individual", 9, 35,
-                        "19-Mayo"));
-                etapas.add(new Etapa("Ravenna", "Modena", "Llana", 10, 147, "21-Mayo"));
-
+                etapas.add(new Etapa("Bologna", "Bologna (San Luca)",
+                        "Contrarreloj individual",1, 8, "11-Mayo"));
+                etapas.add(new Etapa("Bologna", "Fucecchio", "Media montaña",
+                        2, 200, "12-Mayo"));
+                etapas.add(new Etapa("Vinci", "Orbetello", "Media montaña",
+                        3, 219, "13-Mayo"));
+                etapas.add(new Etapa("Orbetello", "Frascati", "Media montaña",
+                        4, 228, "14-Mayo"));
+                etapas.add(new Etapa("Frascati", "Terracina", "Llana", 5,
+                        140, "15-Mayo"));
+                etapas.add(new Etapa("Cassino", "San Giovanni Rotondo",
+                        "Media montaña", 6, 233,"16-Mayo"));
+                etapas.add(new Etapa("Vasto", "L'Aquila", "Media montaña",
+                        7, 180, "17-Mayo"));
+                etapas.add(new Etapa("Tortoreto Lido", "Pesaro", "Media montaña",
+                        8, 235,"18-Mayo"));
+                etapas.add(new Etapa("Riccione", "San Marino",
+                        "Contrarreloj individual", 9, 35,"19-Mayo"));
+                etapas.add(new Etapa("Ravenna", "Modena", "Llana",
+                        10, 147, "21-Mayo"));
+                etapas.add(new Etapa("Carpi", "Novi Ligure", "Llana", 11,
+                        206, "22-Mayo"));
+                etapas.add(new Etapa("Cuneo", "Pinerolo", "Media montaña",
+                        12, 146, "23-Mayo"));
+                etapas.add(new Etapa("Pinerolo", "Ceresole Reale (Lago Serrú)",
+                        "Alta montaña", 13, 188, "24-Mayo"));
+                etapas.add(new Etapa("Saint-Vincent", "Courmayeur (Skyway Monte Bianco",
+                        "Alta montaña", 14, 131, "25-Mayo"));
+                etapas.add(new Etapa("Ivrea", "Como", "Alta montaña", 15,
+                        237, "26-Mayo"));
+                etapas.add(new Etapa("Lovere", "Ponte di Legno", "Alta montaña",
+                        16, 226, "28-Mayo"));
+                etapas.add(new Etapa("Commezzadura (Val di Sole)", "Anterselva/Antholz",
+                        "Media montaña", 17, 180, "29-Mayo"));
+                etapas.add(new Etapa("Valdaora/Olang", "Santa Maria di Sala",
+                        "Llana", 18, 220, "30-Mayo"));
+                etapas.add(new Etapa("Treviso", "San Martino di Castrozza",
+                        "Media montaña",19, 151, "31-Mayo"));
+                etapas.add(new Etapa("Feltre", "Croce d'Aune-Monte Avena",
+                        "Alta montaña", 20, 193, "01-Junio"));
+                etapas.add(new Etapa("Verona", "Verona", "Contrarreloj individual",
+                        21, 16, "02-Junio"));
 
                 Log.d("FIREBASE", "Etapas a insertar: " + etapas
                         .size());
