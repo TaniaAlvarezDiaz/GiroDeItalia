@@ -9,6 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,7 +47,18 @@ public class MainActivity extends AppCompatActivity {
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        //Obtener el listview.
+        // Obtener imageView del logo y la mascota de la pantalla inicial
+        ImageView logoImage = (ImageView) findViewById(R.id.logoGiro);
+        StorageReference imageStorageReference = FirebaseStorage.getInstance().getReference().child("Logo");
+        StorageReference photoRef = imageStorageReference.child("Logo.png");
+        Glide.with(this).load(photoRef).into(logoImage);
+
+        ImageView mascotaImage = (ImageView) findViewById(R.id.mascotaGiro);
+        imageStorageReference = FirebaseStorage.getInstance().getReference().child("Mascota");
+        photoRef = imageStorageReference.child("Mascota.png");
+        Glide.with(this).load(photoRef).into(mascotaImage);
+
+        //Obtener ExpandableListView
         expListView = (ExpandableListView) findViewById(R.id.expandable_list);
         //Preparar datos para Header y Listado en ExpandableListView.
         prepareListData();
@@ -81,9 +97,6 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), CalendarioActivity.class);
                     } else if (listDataHeader.get(groupPosition).toString().equals("Patrimonio")) {
                         intent = new Intent(getApplicationContext(), PatrimonioActivity.class);
-                    } else {
-                        intent.putExtra(OPCION_ESCOGIDA, listDataHeader.get(groupPosition)
-                                .toString());
                     }
                     startActivity(intent);
                     return true;

@@ -4,7 +4,7 @@
 
     <TextView
         android:id="@+id/textViewFechaCalendario"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -19,7 +19,7 @@
         android:layout_height="30dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="80dp"
         android:layout_centerVertical="true"
         android:layout_toEndOf="@id/textViewFechaCalendario"
         android:text="@string/Evento"

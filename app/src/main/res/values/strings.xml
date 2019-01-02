@@ -25,6 +25,14 @@
     <string name="hello_blank_fragment">Información de la etapa</string>
     <string name="Recorrido">Recorrido</string>
     <string name="Perfil">Perfil</string>
-    <string name="FechaCalendario">11 Mayo</string>
+    <string name="FechaCalendario">11 de mayo</string>
     <string name="Evento">Etapa 1</string>
+    <string name="AnioGiro">2019</string>
+    <string name="LogoGiro">Logo del giro</string>
+    <string name="InicioGiro">Inicio: 11 de mayo</string>
+    <string name="FinGiro">Fin: 2 de junio</string>
+    <string name="NumEtapasGiro">Nº de etapas: 21</string>
+    <string name="EdicionGiro">Edición: 102</string>
+    <string name="KmGiro">Km totales: 3.518,5</string>
+    <string name="MascotaGiro">Mascota del giro</string>
 </resources>
