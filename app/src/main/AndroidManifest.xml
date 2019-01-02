@@ -61,6 +61,10 @@
             android:name=".vista.activities.CalendarioActivity"
             android:configChanges="orientation"
             android:parentActivityName=".vista.activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".vista.activities.PalmaresActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".vista.activities.MainActivity"
             android:screenOrientation="portrait"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
