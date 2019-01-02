@@ -116,19 +116,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
-                intent.putExtra(OPCION_ESCOGIDA, listDataChild.get(listDataHeader.get
-                        (groupPosition)).get(childPosition).toString());
+                if (listDataChild.get(listDataHeader.get
+                        (groupPosition)).get(childPosition).toString().equals("Palmarés")) {
+                    intent = new Intent(getApplicationContext(), PalmaresActivity.class);
+                } else {
+                    intent.putExtra(OPCION_ESCOGIDA, listDataChild.get(listDataHeader.get
+                            (groupPosition)).get(childPosition).toString());
+                }
                 startActivity(intent);
                 return true;
             }
         });
 
 
-        // Operaciones con la BBDD, colocarlas aquí para que se hagan antes de pulsar las
-        // opciones de menú
+        // Operaciones con la BBDD, colocarlas aquí para que se hagan al iniciar la app
         //FirebaseUtilidades.rellenarElementosPatrimonio();
         //FirebaseUtilidades.rellenarEtapas();
         //FirebaseUtilidades.rellenarCalendario();
+        //FirebaseUtilidades.rellenarGanadores();
     }
 
     /**

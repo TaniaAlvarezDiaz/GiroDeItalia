@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Dia;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Etapa;
+import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Ganador;
 
 public class FirebaseUtilidades {
 
@@ -27,6 +28,9 @@ public class FirebaseUtilidades {
     public static DatabaseReference calendarioDatabaseReference = firebaseDatabase
             .getReference()
             .child("Calendario");
+    public static DatabaseReference ganadoresDatabaseReference = firebaseDatabase
+            .getReference()
+            .child("Ganadores");
 
     /**
      * Método para borrar todos los elementos del patrimonio que hay en la BBDD y volver a
@@ -326,7 +330,7 @@ public class FirebaseUtilidades {
     }
 
     /**
-     * Método para borrar todas los dias del calendario que hay en la BBDD y volver a
+     * Método para borrar todos los dias del calendario que hay en la BBDD y volver a
      * introducirlos
      */
     public static void rellenarCalendario() {
@@ -383,6 +387,69 @@ public class FirebaseUtilidades {
                 }
                 Log.d("FIREBASE", "Dias insertados: " +
                         diasInsertados);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.d("FIREBASE", "Ha ocurrido un fallo.");
+            }
+        });
+    }
+
+    /**
+     * Método para borrar todos los ganadores que hay en la BBDD y volver a
+     * introducirlos
+     */
+    public static void rellenarGanadores() {
+
+        // Borrar las etapas de la BBDD
+        Query queryRef = ganadoresDatabaseReference.orderByChild("year");
+        queryRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int ganadoresEliminados = 0;
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    snapshot.getRef().removeValue();
+                    ganadoresEliminados++;
+                }
+                Log.d("FIREBASE", "Ganadores elimindos: " +
+                        ganadoresEliminados);
+
+                // Crear los ganadores
+                // Se introducen los ganadores del Giro de Italia desde el año 2000
+                ArrayList<Ganador> ganadores = new ArrayList<>();
+                ganadores.add(new Ganador("C. Froome", "GBR.png", 2018));
+                ganadores.add(new Ganador("T. Dumoulin", "HOL.png", 2017));
+                ganadores.add(new Ganador("V. Nibali", "ITA.png", 2016));
+                ganadores.add(new Ganador("A. Contador", "ESP.png", 2015));
+                ganadores.add(new Ganador("N. Quintana", "COL.png", 2014));
+                ganadores.add(new Ganador("V. Nibali", "ITA.png", 2013));
+                ganadores.add(new Ganador("R. Hesjedal", "CAN.png", 2012));
+                ganadores.add(new Ganador("M. Scarponi", "ITA.png", 2011));
+                ganadores.add(new Ganador("I. Basso", "ITA.png", 2010));
+                ganadores.add(new Ganador("D. Menshov", "RUS.png", 2009));
+                ganadores.add(new Ganador("A. Contador", "ESP.png", 2008));
+                ganadores.add(new Ganador("D. Di Luca", "ITA.png", 2007));
+                ganadores.add(new Ganador("I. Basso", "ITA.png", 2006));
+                ganadores.add(new Ganador("P. Savoldelli", "ITA.png", 2005));
+                ganadores.add(new Ganador("D. Cunego", "ITA.png", 2004));
+                ganadores.add(new Ganador("G. Simoni", "ITA.png", 2003));
+                ganadores.add(new Ganador("P. Savoldelli", "ITA.png", 2002));
+                ganadores.add(new Ganador("G. Simoni", "ITA.png", 2001));
+                ganadores.add(new Ganador("S. Garzelli", "ITA.png", 2000));
+
+                Log.d("FIREBASE", "Ganadores a insertar: " + ganadores
+                        .size());
+
+                // Introducir los elementos en la BBDD
+                int ganadoresInsertados = 0;
+                for (Ganador ganador : ganadores) {
+                    ganadoresDatabaseReference.push().setValue(ganador);
+                    ganadoresInsertados++;
+                }
+                Log.d("FIREBASE", "Ganadores insertados: " +
+                        ganadoresInsertados);
             }
 
             @Override
