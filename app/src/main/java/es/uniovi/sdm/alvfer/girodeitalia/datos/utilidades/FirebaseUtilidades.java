@@ -68,42 +68,133 @@ public class FirebaseUtilidades {
                 elementosPatrimonio.add(new ElementoPatrimonio("Pinacoteca Nacional de Bologna",
                         "La Pinacoteca Nacional de Bologna es uno de los museos más importantes y" +
                                 " relevantes de Italia. Entre sus obras más importantes está la " +
-                                "colección de pinturas de los Carracci y sus seguidores ", 1,
+                                "colección de pinturas de los Carracci y sus seguidores.", 1,
                         "Bologna",
                         "PinacotecaNacionalDeBologna.jpeg", "cultural", 44.497952, 11.353498));
-                /*elementosPatrimonio.add(new ElementoPatrimonio("Plaza de los Leones", "Esta plaza" +
+                elementosPatrimonio.add(new ElementoPatrimonio("Plaza de los Leones", "Esta plaza" +
                         " es la más importante de la ciudad e Empoli. Debe su nombre a la fuente " +
                         "que se encuentra en su centro, la cual está adornada con leones, data de" +
                         " 1827 y es obra de Luigi Pampaloni.", 2, "Empoli", "PlazaDeLosLeones" +
-                        ".jpg", "cultural"));*/
-                // Siguientes elementos del patrimonio buscados por Pedro
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        ".jpg", "cultural", 43.719893, 10.945628));
+                elementosPatrimonio.add(new ElementoPatrimonio("Museo del vidrio", "En pleno " +
+                        "centro histórico de Empoli se encuentra el museo del vidrio, industria " +
+                        "emblemática y característica de esta ciudad.", 2, "Empoli",
+                        "MuseoDelVidrio.jpg", "cultural", 43.721006, 10.947627));
+                elementosPatrimonio.add(new ElementoPatrimonio("Palacio Ghibellino", "Este " +
+                        "palacio fue propiedad de los condes Guidi. Su construcción data del " +
+                        "siglo XI, pero una restauración llevada a cabo en el siglo XVI dejó " +
+                        "pocos restos del edificio original. En su interior se encuentra el Museo" +
+                        " de la Paleontología.", 2, "Empoli",
+                        "PalacioGhibellino.jpg", "historico", 43.719699, 10.945576));
+                elementosPatrimonio.add(new ElementoPatrimonio("Museo de Leonardo da Vinci",
+                        "Museo dedicado a la figura más destacada del Renacimiento italiano, " +
+                                "Leonardo da Vinci. En él se pueden encontrar y contemplar muchas" +
+                                " de sus creaciones.", 3, "Vinci",
+                        "MuseoDeLeonardoDaVinci.jpg", "cultural", 43.787807, 10.927010));
+                elementosPatrimonio.add(new ElementoPatrimonio("Colinas de Montalbano",
+                        "Las colinas de Montalbano son una zona ideal para aquellos que practican" +
+                                " ciclismo y trekking, debido a la cantidad senderos naturales " +
+                                "que" +
+                                " existen en ellas. Se encuentran en una zona natural protegida, " +
+                                "en cuyos alrededores existen numerosas iglesisas, poblaciones " +
+                                "históricas y casas rurales.", 3, "Vinci",
+                        "ColinasDeMontalbano.jpg", "geografico", 43.791473, 10.980283));
+                elementosPatrimonio.add(new ElementoPatrimonio("Laguna de Orbetello",
+                        "La laguna de Orbetello atrae a numeosos turistas en cualquier época del " +
+                                "año debido a sus maravillosas vistas. Es desde 1971 una zona " +
+                                "protegida por el Fondo Mundial del Ambiente.", 4, "Orbetello",
+                        "LagunaDeOrbetello.jpg", "geografico", 42.438414, 11.194040));
+                elementosPatrimonio.add(new ElementoPatrimonio("Playa de Feniglia",
+                        "Playa situada dentro de una zona natural protegida. Su arena es fina y " +
+                                "clara, y sus aguas transparentes. Junto a ella existe un gran " +
+                                "bosque de pinos donde poder comer o hacer excursiones a la " +
+                                "sombra.", 4, "Orbetello",
+                        "PlayaDeFeniglia.jpg", "geografico", 42.409916, 11.208737));
+                elementosPatrimonio.add(new ElementoPatrimonio("Monte Circeo",
+                        "El Monte Circeo es la principal atracción del parque nacional del " +
+                                "Circeo, el cual fue formado en 1934 y tiene una extensión de 84 " +
+                                "kilómetros cuadrados.", 5, "Terracina",
+                        "MonteCirceo.jpg", "geografico", 41.239133, 13.045709));
+                elementosPatrimonio.add(new ElementoPatrimonio("Templo de Júpiter Anxur",
+                        "Este templo se encuentra en la cumbre del monte Sant’Angelo y es un " +
+                                "símbolo de la población de Terracina. Su construcción data del " +
+                                "siglo IV antes de Cristo, y posee un estilo pompeyano.", 5,
+                        "Terracina",
+                        "TemploDeJupiterAnxur.jpg", "historico", 41.291008, 13.260097));
+                elementosPatrimonio.add(new ElementoPatrimonio("Torre Paola",
+                        "Torre de estilo medieval construida con fines defensivos en un lugar " +
+                                "estratégico junto a la costa.", 5,
+                        "Terracina",
+                        "TorrePaola.JPG", "historico", 41.246429, 13.034840));
+                elementosPatrimonio.add(new ElementoPatrimonio("Abadía de Montecassino",
+                        "La Abadía de Montecasino es una abadía benedictina, famosa por ser el " +
+                                "lugar en el cual Benito de Nursia estableció en el año 529 su " +
+                                "primer monasterio. Numerosas batallas al fin de la Segunda " +
+                                "Guerra Mundial tuvieron lugar en los alrededores de esta abadía" +
+                                ".", 6,
+                        "Cassino",
+                        "AbadiaDeMontecassino.JPG", "historico", 41.492486, 13.815729));
+                elementosPatrimonio.add(new ElementoPatrimonio("Museo paleontológico del " +
+                        "donosaurio",
+                        "Museo en el que descubrir todo tipo de datos acerca de los dinosaurios y" +
+                                " contemplar sus maquetas e imágenes. Una visita enriquecedora " +
+                                "para todos los miembros de la familia.", 6,
+                        "San Giovanni Rotondo",
+                        "MuseoPaleontologicoDelDinosaurio.jpg", "cultural", 41.706866, 15.652246));
+                elementosPatrimonio.add(new ElementoPatrimonio("Reserva natural Punta Aderci",
+                        "Dentro de esta reserva natural se encuentra una famosa playa de piedras," +
+                                " la cual está rodeada por acantilados con vistas panorámicas al " +
+                                "mar.", 7,
+                        "Vasto",
+                        "ReservaNaturalPuntaAderci.jpg", "geografico", 42.180261, 14.687680));
+                elementosPatrimonio.add(new ElementoPatrimonio("Basílica de San Bernardino",
+                        "Esta basílica fue construida en el año 1444 tras la muerte de San " +
+                                "Bernardino de Siena con la intención de custodiar su cuerpo. " +
+                                "Posee una fachada renacentista y un interior de estilo barroco " +
+                                "reconstruido tras un terremoto en 1703.", 7,
+                        "L'Aquila",
+                        "BasilicaDeSanBernardino.jpg", "historico", 42.350754, 13.402455));
+                elementosPatrimonio.add(new ElementoPatrimonio("Monte San Bartolo",
+                        "Montaña más icónica del parque natural del Monte San Bartolo. Esta " +
+                                "montaña forma el principio de un sistema de colinas costeras que" +
+                                " recorren el centro de la costa de Italia, siguiendo las playas " +
+                                "del mar Adriático", 8,
+                        "Pesaro",
+                        "MonteSanBartolo.jpg", "geografico", 43.920736, 12.895404));
+                elementosPatrimonio.add(new ElementoPatrimonio("Gran Esfera de A. Pomodoro",
+                        "La Gran Esfera de A. Pomodoro es una escultura de bronce hecha por el " +
+                                "escultor italiano Arnaldo Pomodoro. Esta escultura está formada " +
+                                "por dos esferas, una dentro de otra, estando ambas fracturadas" +
+                                ".", 8,
+                        "Pesaro",
+                        "GranEsferaDePomodoro.jpg", "cultural", 43.914324, 12.918456));
+                elementosPatrimonio.add(new ElementoPatrimonio("Fortaleza Guaita",
+                        "Emblemática fortaleza del siglo XI en el monte Titano, con exposiciones " +
+                                "y vistas panorámicas de la ciudad de San Marino.", 9,
+                        "San Marino",
+                        "FortalezaGuaita.jpg", "historico", 43.935552, 12.449677));
+                elementosPatrimonio.add(new ElementoPatrimonio("Torre Falesia",
+                        "Histórica torre con un pequeño museo de armas y vistas panorámicas de la" +
+                                " ciudad de San Marino, el mar y la montaña.", 9,
+                        "San Marino",
+                        "TorreFalesia.jpg", "historico", 43.932288, 12.452058));
+                elementosPatrimonio.add(new ElementoPatrimonio("Iglesia de San Vital de Ravenna",
+                        "Emblemática iglesia de cúpula octogonal conocida por sus elaborados " +
+                                "mosaicos bizantinos de colores vivos.", 10,
+                        "Ravenna",
+                        "IglesiaDeSanVitalDeRavenna.JPG", "historico", 44.420801, 12.196376));
+                elementosPatrimonio.add(new ElementoPatrimonio("Museo de Enzo Ferrari",
+                        "Museo centrado en la vida y obra de Enzo Ferrari, fundador de la marca " +
+                                "Ferrari. El edificio que alberga este museo es futurista y " +
+                                "cuenta con paredes de vidrio.", 10,
+                        "Modena",
+                        "MuseoDeEnzoFerrari.jpg", "cultural", 44.652280, 10.936881));
+                elementosPatrimonio.add(new ElementoPatrimonio("Mausoleo de Gala Placidia",
+                        "Capilla del siglo V con forma de cruz latina y decorada con coloridos " +
+                                "mosaicos romanos. Es una de las estructuras de Ravenna inscritas" +
+                                " en la lista del Patrimonio de la Humanidad en 1996.", 10,
+                        "Ravenna",
+                        "MausoleoDeGalaPlacidia.jpg", "historico", 44.421228, 12.197081));
 
 
                 // Elementos del patrimonio buscados por Tania
