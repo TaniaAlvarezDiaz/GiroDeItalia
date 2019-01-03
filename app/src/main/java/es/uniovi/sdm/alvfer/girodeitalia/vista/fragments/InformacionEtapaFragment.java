@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -60,10 +61,10 @@ public class InformacionEtapaFragment extends Fragment {
         PhotoView photoViewPerfilEtapa = getActivity().findViewById(R.id.photoViewPerfilEtapa);
 
         StorageReference recorridoEtapaPhotoRef = etapasImagenesStorageReference.child("Etapa" + etapa.getNumero() + "Recorrido.jpg");
-        Glide.with(this).load(recorridoEtapaPhotoRef).into(photoViewRecorridoEtapa);
+        Glide.with(this).load(recorridoEtapaPhotoRef).apply(new RequestOptions().error(R.drawable.errorImagen)).into(photoViewRecorridoEtapa);
 
         StorageReference perfilEtapaPhotoRef = etapasImagenesStorageReference.child("Etapa" + etapa.getNumero() + "Perfil.jpg");
-        Glide.with(this).load(perfilEtapaPhotoRef).into(photoViewPerfilEtapa);
+        Glide.with(this).load(perfilEtapaPhotoRef).apply(new RequestOptions().error(R.drawable.errorImagen)).into(photoViewPerfilEtapa);
 
         textViewNumero = getActivity().findViewById(R.id.textViewNumero);
         textViewNumero.setText("Etapa " + etapa.getNumero());
