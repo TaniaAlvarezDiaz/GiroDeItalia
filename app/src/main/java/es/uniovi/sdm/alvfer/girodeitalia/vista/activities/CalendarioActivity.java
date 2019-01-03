@@ -1,5 +1,6 @@
 package es.uniovi.sdm.alvfer.girodeitalia.vista.activities;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -8,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,13 +31,18 @@ public class CalendarioActivity extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference calendarioDatabaseReference;
     private RecyclerView recyclerView;
+    private ProgressBar progressBar;
     private CalendarioAdapter calendarioAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendario);
+
+        progressBar = findViewById(R.id.progressBarCalendario);
         recyclerView = findViewById(R.id.recyclerViewCalendario);
+        progressBar.setVisibility(View.VISIBLE);
+        recyclerView.setVisibility(View.GONE);
 
         dias = new ArrayList<>();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -64,6 +71,8 @@ public class CalendarioActivity extends AppCompatActivity {
                     Dia dia = snapshot.getValue(Dia.class);
                     dias.add(dia);
                     calendarioAdapter.notifyDataSetChanged();
+                    progressBar.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
                 }
             }
 
@@ -73,4 +82,21 @@ public class CalendarioActivity extends AppCompatActivity {
             }
         });
     }
+
+  /*  public void showProgressDialog() {
+        if (mProgressDialog == null) {
+            mProgressDialog = new ProgressDialog(this);
+            mProgressDialog.setProgressDrawable(@);
+            mProgressDialog.setIndeterminate(true);
+        }
+
+        mProgressDialog.show();
+    }
+
+
+    public void hideProgressDialog() {
+        if (mProgressDialog != null && mProgressDialog.isShowing()) {
+            mProgressDialog.dismiss();
+        }
+    }*/
 }

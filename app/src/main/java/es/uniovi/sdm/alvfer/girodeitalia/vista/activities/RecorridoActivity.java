@@ -23,8 +23,7 @@ public class RecorridoActivity extends AppCompatActivity {
         PhotoView photoView = (PhotoView) findViewById(R.id.ivRecorrido);
 
         firebaseStorage = FirebaseStorage.getInstance();
-        mapaRecorridoImagenesStorageReference = firebaseStorage.getReference().child
-                ("MapaRecorrido");
+        mapaRecorridoImagenesStorageReference = firebaseStorage.getReference().child("MapaRecorrido");
         StorageReference photoRef = mapaRecorridoImagenesStorageReference.child("MapaRecorrido.png");
         Glide.with(this).load(photoRef).into(photoView);
 
