@@ -10,7 +10,7 @@ public class ElementoPatrimonio implements Parcelable {
     private int etapa;
     private String lugar;
     private String nombreImagen;
-    private String tipoPatrimonio;
+    private String tipoPatrimonio; // historico, cultural o geografico
     private double latitud;
     private double longitud;
 

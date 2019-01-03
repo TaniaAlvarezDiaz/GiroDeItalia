@@ -47,7 +47,7 @@ public class PalmaresActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager
                 .VERTICAL));
 
-        ganadorAdapter = new GanadorAdapter(ganadores);
+        ganadorAdapter = new GanadorAdapter(ganadores, getApplicationContext());
         recyclerView.setAdapter(ganadorAdapter);
 
         obtenerGanadores();

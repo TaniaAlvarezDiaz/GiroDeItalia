@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="wrap_content">
 
     <TextView
@@ -24,4 +24,36 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="false"
         android:layout_below="@id/textViewTipoEtapa" />
-</RelativeLayout>
+</RelativeLayout>-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textViewNumeroEtapaRecycler"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center" />
+
+    <TextView
+        android:id="@+id/textViewKilometrosEtapaRecycler"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center" />
+
+    <ImageView
+        android:id="@+id/imageViewTipoEtapaRecycler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/TipoEtapa"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        app:srcCompat="@drawable/ic_launcher_background" />
+</LinearLayout>
