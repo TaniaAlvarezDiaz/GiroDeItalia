@@ -17,6 +17,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="vertical"
     tools:context=".vista.fragments.InformacionEtapaFragment">
 
     <android.support.constraint.ConstraintLayout
@@ -31,18 +32,45 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTituloSalida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Salida"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNumero" />
 
         <TextView
             android:id="@+id/textViewSalida"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewTituloSalida"
             app:layout_constraintTop_toBottomOf="@+id/textViewNumero" />
+
+        <TextView
+            android:id="@+id/textViewTituloMeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/Meta"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloSalida" />
 
         <TextView
             android:id="@+id/textViewMeta"
@@ -50,8 +78,21 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewTituloMeta"
             app:layout_constraintTop_toBottomOf="@+id/textViewSalida" />
+
+        <TextView
+            android:id="@+id/textViewTituloKilometros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/Kilometros"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloMeta" />
 
         <TextView
             android:id="@+id/textViewKilometros"
@@ -59,8 +100,21 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewTituloKilometros"
             app:layout_constraintTop_toBottomOf="@+id/textViewMeta" />
+
+        <TextView
+            android:id="@+id/textViewTituloTipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/Tipo"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloKilometros" />
 
         <TextView
             android:id="@+id/textViewTipo"
@@ -68,8 +122,21 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewTituloTipo"
             app:layout_constraintTop_toBottomOf="@+id/textViewKilometros" />
+
+        <TextView
+            android:id="@+id/textViewTituloFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/Fecha"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloTipo" />
 
         <TextView
             android:id="@+id/textViewFecha"
@@ -77,15 +144,18 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewTituloFecha"
             app:layout_constraintTop_toBottomOf="@+id/textViewTipo" />
 
         <TextView
             android:id="@+id/textViewRecorrido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginTop="24dp"
             android:text="@string/Recorrido"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewFecha" />
@@ -105,8 +175,10 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/Perfil"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/photoViewRecorridoEtapa" />

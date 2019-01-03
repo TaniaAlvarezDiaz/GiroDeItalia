@@ -69,15 +69,15 @@ public class InformacionEtapaFragment extends Fragment {
         textViewNumero = getActivity().findViewById(R.id.textViewNumero);
         textViewNumero.setText("Etapa " + etapa.getNumero());
         textViewSalida = getActivity().findViewById(R.id.textViewSalida);
-        textViewSalida.setText("Salida: " + etapa.getSalida());
+        textViewSalida.setText(etapa.getSalida());
         textViewMeta = getActivity().findViewById(R.id.textViewMeta);
-        textViewMeta.setText("Meta: " + etapa.getMeta());
+        textViewMeta.setText(etapa.getMeta());
         textViewKilometros = getActivity().findViewById(R.id.textViewKilometros);
-        textViewKilometros.setText("Kilómetros: " + etapa.getKilometros());
+        textViewKilometros.setText("" + etapa.getKilometros());
         textViewTipo = getActivity().findViewById(R.id.textViewTipo);
-        textViewTipo.setText("Tipo: " + etapa.getTipo());
+        textViewTipo.setText(etapa.getTipo());
         textViewFecha = getActivity().findViewById(R.id.textViewFecha);
-        textViewFecha.setText("Fecha: " + etapa.getFecha());
+        textViewFecha.setText(etapa.getFecha().split("-")[0] + " de " + etapa.getFecha().split("-")[1]);
     }
 
 }

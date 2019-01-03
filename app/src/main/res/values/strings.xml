@@ -43,4 +43,9 @@
     <string name="MascotaGiro">Mascota del giro</string>
     <string name="Bandera">Bandera</string>
     <string name="TipoEtapa">TipoEtapa</string>
+    <string name="Salida">Salida:</string>
+    <string name="Meta">Meta:</string>
+    <string name="Kilometros">Kilómetros:</string>
+    <string name="Tipo">Tipo:</string>
+    <string name="Fecha">Fecha:</string>
 </resources>
