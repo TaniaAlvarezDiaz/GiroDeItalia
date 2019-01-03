@@ -52,7 +52,7 @@ public class EtapasActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager
                 .VERTICAL));
 
-        etapaAdapter = new EtapaAdapter(etapas);
+        etapaAdapter = new EtapaAdapter(etapas, getApplicationContext());
         recyclerView.setAdapter(etapaAdapter);
 
         obtenerEtapas();

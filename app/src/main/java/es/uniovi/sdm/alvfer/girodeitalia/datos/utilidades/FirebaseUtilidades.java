@@ -292,7 +292,7 @@ public class FirebaseUtilidades {
                         12, 146, "23-Mayo"));
                 etapas.add(new Etapa("Pinerolo", "Ceresole Reale (Lago Serrú)",
                         "Alta montaña", 13, 188, "24-Mayo"));
-                etapas.add(new Etapa("Saint-Vincent", "Courmayeur (Skyway Monte Bianco",
+                etapas.add(new Etapa("Saint-Vincent", "Courmayeur (Skyway Monte Bianco)",
                         "Alta montaña", 14, 131, "25-Mayo"));
                 etapas.add(new Etapa("Ivrea", "Como", "Alta montaña", 15,
                         237, "26-Mayo"));
@@ -305,9 +305,9 @@ public class FirebaseUtilidades {
                 etapas.add(new Etapa("Treviso", "San Martino di Castrozza",
                         "Media montaña", 19, 151, "31-Mayo"));
                 etapas.add(new Etapa("Feltre", "Croce d'Aune-Monte Avena",
-                        "Alta montaña", 20, 193, "01-Junio"));
+                        "Alta montaña", 20, 193, "1-Junio"));
                 etapas.add(new Etapa("Verona", "Verona", "Contrarreloj individual",
-                        21, 16, "02-Junio"));
+                        21, 16, "2-Junio"));
 
                 Log.d("FIREBASE", "Etapas a insertar: " + etapas
                         .size());

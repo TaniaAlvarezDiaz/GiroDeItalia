@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Giro de Italia</string>
+    <string name="app_name">Giro de Italia 2019</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -16,7 +16,7 @@
     <string name="title_activity_nueva_patrimonio">NuevaPatrimonioActivity</string>
     <string name="title_historico">Histórico</string>
     <string name="title_cultural">Cultural</string>
-    <string name="title_geografico">Geografico</string>
+    <string name="title_geografico">Geográfico</string>
     <string name="title_datos">Datos</string>
     <string name="title_patrimonio">Patrimonio</string>
     <string name="VerEnMapa">Ver en mapa</string>
@@ -35,4 +35,6 @@
     <string name="EdicionGiro">Edición: 102</string>
     <string name="KmGiro">Km totales: 3.518,5</string>
     <string name="MascotaGiro">Mascota del giro</string>
+    <string name="Bandera">Bandera</string>
+    <string name="TipoEtapa">TipoEtapa</string>
 </resources>
