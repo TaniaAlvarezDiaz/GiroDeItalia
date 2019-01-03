@@ -37,14 +37,16 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center_vertical|center" />
+        android:gravity="center_vertical|center"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/textViewKilometrosEtapaRecycler"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center_vertical|center" />
+        android:gravity="center_vertical|center"
+        android:textSize="18sp"/>
 
     <ImageView
         android:id="@+id/imageViewTipoEtapaRecycler"
