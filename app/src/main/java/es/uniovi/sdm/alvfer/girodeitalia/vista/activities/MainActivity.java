@@ -10,8 +10,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -51,12 +53,12 @@ public class MainActivity extends AppCompatActivity {
         ImageView logoImage = (ImageView) findViewById(R.id.logoGiro);
         StorageReference imageStorageReference = FirebaseStorage.getInstance().getReference().child("Logo");
         StorageReference photoRef = imageStorageReference.child("Logo.png");
-        Glide.with(this).load(photoRef).into(logoImage);
+        Glide.with(this).load(photoRef).apply(new RequestOptions().error(R.drawable.error_imagen)).into(logoImage);
 
         ImageView mascotaImage = (ImageView) findViewById(R.id.mascotaGiro);
         imageStorageReference = FirebaseStorage.getInstance().getReference().child("Mascota");
         photoRef = imageStorageReference.child("Mascota.png");
-        Glide.with(this).load(photoRef).into(mascotaImage);
+        Glide.with(this).load(photoRef).apply(new RequestOptions().error(R.drawable.error_imagen)).into(mascotaImage);
 
         //Obtener ExpandableListView
         expListView = (ExpandableListView) findViewById(R.id.expandable_list);

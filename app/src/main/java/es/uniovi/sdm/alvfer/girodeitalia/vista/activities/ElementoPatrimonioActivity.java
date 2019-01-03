@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -51,7 +52,7 @@ public class ElementoPatrimonioActivity extends AppCompatActivity {
 
         ImageView imageView = findViewById(R.id.imageViewPhoto);
 
-        Glide.with(this).load(photoRef).into(imageView);
+        Glide.with(this).load(photoRef).apply(new RequestOptions().error(R.drawable.error_imagen)).into(imageView);
 
         textViewNombre.setText(elementoPatrimonio.getNombre());
         textViewDescripcion.setText("Descripción: " + elementoPatrimonio.getDescripcion());
@@ -60,7 +61,6 @@ public class ElementoPatrimonioActivity extends AppCompatActivity {
     }
 
     public void verEnMapa(View view) {
-        // Crear y abrir la activity del mapa
         Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
         intent.putExtra("nombre", elementoPatrimonio.getNombre());
         intent.putExtra("latitud", elementoPatrimonio.getLatitud());

@@ -8,6 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -17,6 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.ElementoPatrimonioActivity;
+import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.PatrimonioActivity;
 
 public class PatrimonioHistoricoFragment extends ListFragment {
 
@@ -32,6 +36,7 @@ public class PatrimonioHistoricoFragment extends ListFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.VISIBLE);
         firebaseDatabase = FirebaseDatabase.getInstance();
         elementosPatrimonioDatabaseReference = firebaseDatabase.getReference().child
                 ("ElementosPatrimonio");
@@ -63,13 +68,15 @@ public class PatrimonioHistoricoFragment extends ListFragment {
                     ElementoPatrimonio elementoPatrimonio = snapshot.getValue(ElementoPatrimonio
                             .class);
                     elementosPatrimonioHistorico.add(elementoPatrimonio);
-                    arrayAdapter.notifyDataSetChanged();
                 }
+                ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.GONE);
+                arrayAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.d("FIREBASE", "Ha ocurrido un fallo de lectura.");
+                Toast.makeText(getActivity().getApplicationContext(), "Ha habido un problema al " +
+                        "cargar los datos", Toast.LENGTH_SHORT).show();
             }
         });
     }

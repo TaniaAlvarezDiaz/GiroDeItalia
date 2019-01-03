@@ -7,6 +7,22 @@
     android:layout_height="match_parent"
     tools:context=".vista.activities.PatrimonioActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBarPatrimonioActivity"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorPrimary"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigationActivityPatrimonio"
         android:layout_width="0dp"

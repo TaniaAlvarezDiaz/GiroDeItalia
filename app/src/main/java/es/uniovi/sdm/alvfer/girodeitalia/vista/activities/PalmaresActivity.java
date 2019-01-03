@@ -7,6 +7,8 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -15,8 +17,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.Collections;
+
 import es.uniovi.sdm.alvfer.girodeitalia.R;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Ganador;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.utilidades.GanadorAdapter;
@@ -28,13 +32,19 @@ public class PalmaresActivity extends AppCompatActivity {
     private DatabaseReference ganadoresDatabaseReference;
     private RecyclerView recyclerView;
     private GanadorAdapter ganadorAdapter;
+    private ProgressBar progressBar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_palmares);
+
+        progressBar = findViewById(R.id.progressBarPalmares);
         recyclerView = findViewById(R.id.recyclerViewPalmares);
+
+        progressBar.setVisibility(View.VISIBLE);
+        recyclerView.setVisibility(View.GONE);
 
         ganadores = new ArrayList<>();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -66,16 +76,17 @@ public class PalmaresActivity extends AppCompatActivity {
                     Ganador ganador = snapshot.getValue(Ganador
                             .class);
                     ganadores.add(ganador);
-                    Log.d("FIREBASE", "Ganador recibido: " + ganador);
                 }
                 Collections.reverse(ganadores);
                 ganadorAdapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.d("FIREBASE", "Ha ocurrido un fallo de lectura.");
-                Toast.makeText(getApplicationContext(), "Ha habido un problema al cargar los datos",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Ha habido un problema al cargar los " +
+                        "datos", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -32,13 +33,19 @@ public class EtapasActivity extends AppCompatActivity {
     private DatabaseReference etapasDatabaseReference;
     private RecyclerView recyclerView;
     private EtapaAdapter etapaAdapter;
+    private ProgressBar progressBar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_etapas);
+
+        progressBar = findViewById(R.id.progressBarEtapas);
         recyclerView = findViewById(R.id.recyclerViewEtapas);
+
+        progressBar.setVisibility(View.VISIBLE);
+        recyclerView.setVisibility(View.GONE);
 
         etapas = new ArrayList<>();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -87,14 +94,16 @@ public class EtapasActivity extends AppCompatActivity {
                     Etapa etapa = snapshot.getValue(Etapa
                             .class);
                     etapas.add(etapa);
-                    etapaAdapter.notifyDataSetChanged();
                 }
+                etapaAdapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.d("FIREBASE", "Ha ocurrido un fallo de lectura.");
-                Toast.makeText(getApplicationContext(), "Ha habido un problema al cargar los datos",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Ha habido un problema al cargar los " +
+                        "datos", Toast.LENGTH_SHORT).show();
             }
         });
     }

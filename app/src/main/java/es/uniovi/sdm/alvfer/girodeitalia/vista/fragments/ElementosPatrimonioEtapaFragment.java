@@ -1,5 +1,6 @@
 package es.uniovi.sdm.alvfer.girodeitalia.vista.fragments;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,17 +9,22 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
+
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Etapa;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.ElementoPatrimonioActivity;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.EtapaActivity;
+import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.PatrimonioActivity;
 
 public class ElementosPatrimonioEtapaFragment extends ListFragment {
 
@@ -35,6 +41,7 @@ public class ElementosPatrimonioEtapaFragment extends ListFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ((EtapaActivity) getActivity()).getProgressBar().setVisibility(View.VISIBLE);
         firebaseDatabase = FirebaseDatabase.getInstance();
         elementosPatrimonioDatabaseReference = firebaseDatabase.getReference().child
                 ("ElementosPatrimonio");
@@ -45,7 +52,7 @@ public class ElementosPatrimonioEtapaFragment extends ListFragment {
 
         Bundle arguments = getArguments();
         if (arguments != null) {
-            this.etapa =  arguments.getParcelable(EtapaActivity.ETAPA);
+            this.etapa = arguments.getParcelable(EtapaActivity.ETAPA);
         }
         obtenerElementosPatrimonioEtapa();
     }
@@ -71,13 +78,15 @@ public class ElementosPatrimonioEtapaFragment extends ListFragment {
                     ElementoPatrimonio elementoPatrimonio = snapshot.getValue(ElementoPatrimonio
                             .class);
                     elementosPatrimonioEtapa.add(elementoPatrimonio);
-                    arrayAdapter.notifyDataSetChanged();
                 }
+                ((EtapaActivity) getActivity()).getProgressBar().setVisibility(View.GONE);
+                arrayAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.d("FIREBASE", "Ha ocurrido un fallo de lectura.");
+                Toast.makeText(getActivity().getApplicationContext(), "Ha habido un problema al " +
+                        "cargar los datos", Toast.LENGTH_SHORT).show();
             }
         });
     }

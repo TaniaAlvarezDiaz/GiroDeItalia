@@ -48,12 +48,14 @@ public class CalendarioActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         calendarioDatabaseReference = firebaseDatabase.getReference().child("Calendario");
 
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext
+                ());
         recyclerView.setLayoutManager(mLayoutManager);
 
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager
+                .VERTICAL));
 
         calendarioAdapter = new CalendarioAdapter(dias);
         recyclerView.setAdapter(calendarioAdapter);
@@ -70,16 +72,16 @@ public class CalendarioActivity extends AppCompatActivity {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Dia dia = snapshot.getValue(Dia.class);
                     dias.add(dia);
-                    calendarioAdapter.notifyDataSetChanged();
-                    progressBar.setVisibility(View.GONE);
-                    recyclerView.setVisibility(View.VISIBLE);
                 }
+                calendarioAdapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.VISIBLE);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.d("FIREBASE", "Ha ocurrido un fallo de lectura.");
-                Toast.makeText(getApplicationContext(), "Ha habido un problema al cargar los datos",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Ha habido un problema al cargar los " +
+                        "datos", Toast.LENGTH_SHORT).show();
             }
         });
     }

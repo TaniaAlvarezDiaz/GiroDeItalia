@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.ElementoPatrimonioActivity;
+import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.PatrimonioActivity;
 
 public class PatrimonioGeograficoFragment extends ListFragment {
 
@@ -33,6 +36,7 @@ public class PatrimonioGeograficoFragment extends ListFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.VISIBLE);
         firebaseDatabase = FirebaseDatabase.getInstance();
         elementosPatrimonioDatabaseReference = firebaseDatabase.getReference().child
                 ("ElementosPatrimonio");
@@ -64,13 +68,15 @@ public class PatrimonioGeograficoFragment extends ListFragment {
                     ElementoPatrimonio elementoPatrimonio = snapshot.getValue(ElementoPatrimonio
                             .class);
                     elementosPatrimonioGeografico.add(elementoPatrimonio);
-                    arrayAdapter.notifyDataSetChanged();
                 }
+                ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.GONE);
+                arrayAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.d("FIREBASE", "Ha ocurrido un fallo de lectura.");
+                Toast.makeText(getActivity().getApplicationContext(), "Ha habido un problema al " +
+                        "cargar los datos", Toast.LENGTH_SHORT).show();
             }
         });
     }

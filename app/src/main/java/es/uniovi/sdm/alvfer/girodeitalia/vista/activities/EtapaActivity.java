@@ -5,6 +5,8 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import es.uniovi.sdm.alvfer.girodeitalia.R;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Etapa;
@@ -16,7 +18,7 @@ public class EtapaActivity extends AppCompatActivity {
     public static final String ETAPA = "Etapa";
 
     private Etapa etapa;
-
+    private ProgressBar progressBar;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -48,6 +50,8 @@ public class EtapaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_etapa);
 
+        progressBar = findViewById(R.id.progressBarEtapaActivity);
+
         Bundle b = getIntent().getExtras();
         this.etapa = b.getParcelable(ETAPA);
 
@@ -60,6 +64,10 @@ public class EtapaActivity extends AppCompatActivity {
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigationActivityEtapa);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+    public ProgressBar getProgressBar() {
+        return progressBar;
     }
 
 }

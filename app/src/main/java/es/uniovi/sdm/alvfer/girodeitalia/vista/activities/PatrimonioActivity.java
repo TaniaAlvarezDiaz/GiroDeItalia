@@ -5,6 +5,8 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.ProgressBar;
+
 import es.uniovi.sdm.alvfer.girodeitalia.R;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.fragments.PatrimonioCulturalFragment;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.fragments.PatrimonioGeograficoFragment;
@@ -12,6 +14,8 @@ import es.uniovi.sdm.alvfer.girodeitalia.vista.fragments.PatrimonioHistoricoFrag
 
 
 public class PatrimonioActivity extends AppCompatActivity {
+
+    private ProgressBar progressBar;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -47,6 +51,8 @@ public class PatrimonioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patrimonio);
 
+        progressBar = findViewById(R.id.progressBarPatrimonioActivity);
+
         PatrimonioHistoricoFragment patrimonioHistoricoFragment = new
                 PatrimonioHistoricoFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id
@@ -54,6 +60,10 @@ public class PatrimonioActivity extends AppCompatActivity {
 
         BottomNavigationView navigation = findViewById(R.id.navigationActivityPatrimonio);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+    public ProgressBar getProgressBar() {
+        return progressBar;
     }
 
 }
