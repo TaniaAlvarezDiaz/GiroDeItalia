@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,7 +24,6 @@ import java.util.ArrayList;
 import es.uniovi.sdm.alvfer.girodeitalia.R;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Dia;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.utilidades.CalendarioAdapter;
-import es.uniovi.sdm.alvfer.girodeitalia.vista.utilidades.RecyclerTouchListener;
 
 public class CalendarioActivity extends AppCompatActivity {
 
@@ -79,24 +79,8 @@ public class CalendarioActivity extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Log.d("FIREBASE", "Ha ocurrido un fallo de lectura.");
+                Toast.makeText(getApplicationContext(), "Ha habido un problema al cargar los datos",Toast.LENGTH_SHORT).show();
             }
         });
     }
-
-  /*  public void showProgressDialog() {
-        if (mProgressDialog == null) {
-            mProgressDialog = new ProgressDialog(this);
-            mProgressDialog.setProgressDrawable(@);
-            mProgressDialog.setIndeterminate(true);
-        }
-
-        mProgressDialog.show();
-    }
-
-
-    public void hideProgressDialog() {
-        if (mProgressDialog != null && mProgressDialog.isShowing()) {
-            mProgressDialog.dismiss();
-        }
-    }*/
 }

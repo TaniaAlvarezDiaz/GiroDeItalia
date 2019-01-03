@@ -208,18 +208,6 @@ public class FirebaseUtilidades {
                 // Elementos del patrimonio buscados por Tania
 
 
-
-                /*
-                // Elementos del patrimonio inventados
-                elementosPatrimonio.add(new ElementoPatrimonio("EPCultural1", "Una descripcion",
-                        1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "cultural"));
-                elementosPatrimonio.add(new ElementoPatrimonio("EPCultural2", "Una descripcion",
-                        1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "cultural"));
-                elementosPatrimonio.add(new ElementoPatrimonio("EPGeografico1", "Una descripcion",
-                        1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "geografico"));
-                elementosPatrimonio.add(new ElementoPatrimonio("EPGeografico2", "Una descripcion",
-                        1, "Un lugar", "TorresDeLosAsinelliYGarisenda.jpg", "geografico"));*/
-
                 Log.d("FIREBASE", "Elementos del patrimonio a insertar: " + elementosPatrimonio
                         .size());
 
