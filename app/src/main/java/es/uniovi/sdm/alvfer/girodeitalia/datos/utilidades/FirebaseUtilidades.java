@@ -210,6 +210,41 @@ public class FirebaseUtilidades {
 
 
                 // Elementos del patrimonio buscados por Tania
+                elementosPatrimonio.add(new ElementoPatrimonio("Catedral de Santa María Assunta",
+                        "Construida entre 1514 y 1774, fue diseñada por Baldassarre Peruzzi," +
+                        "quien estuvo en contacto con Leonardo da Vinci.", 11, "Carpi",
+                        "CatedralDiSantaMariaAssunta.jpg", "historico",
+                        44.784713, 10.886276 ));
+                elementosPatrimonio.add(new ElementoPatrimonio("Palacio Ducal",
+                        "Erigido en 1561 sobre un antiguo castillo de la familia Sforza " +
+                        "por el Duque Octavio Farnesio, posee un fresco del famoso artista " +
+                        "Parmigianino.", 11, "Parma", "PalacioDucal.jpg",
+                        "historico",44.807838, 10.322316 ));
+                elementosPatrimonio.add(new ElementoPatrimonio("Catedral de la Asunción y Santa Justina",
+                        "Empezada a construir en el siglo XII, es uno de los ejemplos más destacados " +
+                        "del arte Románico en Italia. Su fachada está hecha con mármol rosa de Verona " +
+                        "y arenisca, mientras en su interior la cúpula está decorada con frescos de "+
+                        "“il Guercino”.", 11, "Piacenza", "CatedralDePiacenza.jpg", "historico",
+                        45.050316, 9.697510));
+                elementosPatrimonio.add(new ElementoPatrimonio("Museo de los Campeones",
+                        "Dedicado a los famosos ciclistas Constante Girardengo (1893-1978) y " +
+                        "Fausto Coppi (1919-1960), alberga también información sobre la historia del ciclismo.",
+                        11, "Novi Ligure", "MuseoDeLosCampeones.jpg", "cultural",
+                        44.763836, 8.778455));
+                elementosPatrimonio.add(new ElementoPatrimonio("Iglesia de San Giovanni",
+                        "Del siglo XIII y de estilo gótico, destaca por su sobriedad exterior y " +
+                        "las bóvedas de crucería que alberga en su interior, donde también se " +
+                        "encuentran la capilla funeraria de los marqueses de Saluzzo y la tumba " +
+                        "del marqués Ludovico II.", 12, "Saluzzo",
+                        "IglesiaSaluzzo.jpg", "historico",
+                        44.643572, 7.487894));
+                elementosPatrimonio.add(new ElementoPatrimonio("Catedral de San Donato",
+                        "Situada en pleno centro histórico, en la Plaza de San Donato, data del " +
+                        "siglo XI y ha sido restaurada en varias ocasiones: en el siglo XVIII se " +
+                        "le añadieron motivos barrocos que fueron retirados en el siglo XIX para " +
+                        "recuperar sus formas originales, de estilo gótico.", 12, "Pinerolo",
+                        "CatedralDeSanDonato.jpg", "historico",
+                        44.885719, 7.330134));
 
 
                 Log.d("FIREBASE", "Elementos del patrimonio a insertar: " + elementosPatrimonio
