@@ -37,7 +37,9 @@ public class PatrimonioCulturalFragment extends ListFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.VISIBLE);
+        if (getActivity() != null) {
+            ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.VISIBLE);
+        }
         firebaseDatabase = FirebaseDatabase.getInstance();
         elementosPatrimonioDatabaseReference = firebaseDatabase.getReference().child
                 ("ElementosPatrimonio");
@@ -70,7 +72,9 @@ public class PatrimonioCulturalFragment extends ListFragment {
                             .class);
                     elementosPatrimonioCultural.add(elementoPatrimonio);
                 }
-                ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.GONE);
+                if (getActivity() != null) {
+                    ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.GONE);
+                }
                 arrayAdapter.notifyDataSetChanged();
             }
 

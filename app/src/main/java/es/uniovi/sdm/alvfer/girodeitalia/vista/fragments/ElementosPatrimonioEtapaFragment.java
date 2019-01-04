@@ -41,7 +41,9 @@ public class ElementosPatrimonioEtapaFragment extends ListFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((EtapaActivity) getActivity()).getProgressBar().setVisibility(View.VISIBLE);
+        if (getActivity() != null) {
+            ((EtapaActivity) getActivity()).getProgressBar().setVisibility(View.VISIBLE);
+        }
         firebaseDatabase = FirebaseDatabase.getInstance();
         elementosPatrimonioDatabaseReference = firebaseDatabase.getReference().child
                 ("ElementosPatrimonio");
@@ -79,7 +81,9 @@ public class ElementosPatrimonioEtapaFragment extends ListFragment {
                             .class);
                     elementosPatrimonioEtapa.add(elementoPatrimonio);
                 }
-                ((EtapaActivity) getActivity()).getProgressBar().setVisibility(View.GONE);
+                if (getActivity() != null) {
+                    ((EtapaActivity) getActivity()).getProgressBar().setVisibility(View.GONE);
+                }
                 arrayAdapter.notifyDataSetChanged();
             }
 

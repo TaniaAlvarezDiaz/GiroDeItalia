@@ -17,7 +17,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
+
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.ElementoPatrimonioActivity;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.PatrimonioActivity;
@@ -36,7 +38,9 @@ public class PatrimonioHistoricoFragment extends ListFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.VISIBLE);
+        if (getActivity() != null) {
+            ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.VISIBLE);
+        }
         firebaseDatabase = FirebaseDatabase.getInstance();
         elementosPatrimonioDatabaseReference = firebaseDatabase.getReference().child
                 ("ElementosPatrimonio");
@@ -69,7 +73,9 @@ public class PatrimonioHistoricoFragment extends ListFragment {
                             .class);
                     elementosPatrimonioHistorico.add(elementoPatrimonio);
                 }
-                ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.GONE);
+                if (getActivity() != null) {
+                    ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.GONE);
+                }
                 arrayAdapter.notifyDataSetChanged();
             }
 

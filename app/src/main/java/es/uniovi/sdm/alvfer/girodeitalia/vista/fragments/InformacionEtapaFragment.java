@@ -39,6 +39,9 @@ public class InformacionEtapaFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getActivity() != null) {
+            ((EtapaActivity) getActivity()).getProgressBar().setVisibility(View.GONE);
+        }
         Bundle arguments = getArguments();
         if (arguments != null) {
             this.etapa =  arguments.getParcelable(EtapaActivity.ETAPA);
