@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="vertical"
-    tools:context=".vista.activities.ElementoPatrimonioActivity">
+    tools:context=".vista.activities.LugarMiticoActivity">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
 
 
         <TextView
-            android:id="@+id/textViewNombreElemento"
+            android:id="@+id/textViewNombreLugarMitico"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageViewPhotoElementoPat"
+            android:id="@+id/imageViewPhotoLugarMitico"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
@@ -36,67 +36,23 @@
             android:contentDescription="@string/PhotoDescription"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewNombreElemento"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNombreLugarMitico"
             app:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
-            android:id="@+id/textViewTituloLugarElemento"
+            android:id="@+id/textViewTituloDescripcionLugarMitico"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            android:text="@string/LugarElementoPat"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewPhotoElementoPat" />
-
-        <TextView
-            android:id="@+id/textViewLugarElemento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/textViewTituloLugarElemento"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewPhotoElementoPat" />
-
-        <TextView
-            android:id="@+id/textViewTituloEtapaElemento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/EtapaElementoPat"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTituloLugarElemento" />
-
-        <TextView
-            android:id="@+id/textViewEtapaElemento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/textViewTituloEtapaElemento"
-            app:layout_constraintTop_toBottomOf="@+id/textViewLugarElemento" />
-
-        <TextView
-            android:id="@+id/textViewTituloDescripcionElemento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:text="@string/Descripcion"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTituloEtapaElemento" />
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPhotoLugarMitico" />
 
         <TextView
-            android:id="@+id/textViewDescripcionElemento"
+            android:id="@+id/textViewDescripcionLugarMitico"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -106,7 +62,32 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTituloDescripcionElemento" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloDescripcionLugarMitico" />
+
+        <TextView
+            android:id="@+id/textViewTituloHechosHistoricos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/HechosHistoricos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescripcionLugarMitico" />
+
+        <TextView
+            android:id="@+id/textViewHechosHistoricos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloHechosHistoricos" />
 
         <Button
             android:id="@+id/buttonVerEnMapaElemento"
@@ -125,7 +106,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewDescripcionElemento" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewHechosHistoricos" />
 
     </android.support.constraint.ConstraintLayout>
 

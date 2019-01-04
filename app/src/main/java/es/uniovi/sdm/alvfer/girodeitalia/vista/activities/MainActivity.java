@@ -1,5 +1,6 @@
 package es.uniovi.sdm.alvfer.girodeitalia.vista.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
@@ -11,16 +12,13 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import es.uniovi.sdm.alvfer.girodeitalia.datos.utilidades.FirebaseUtilidades;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.utilidades.ExpandableListAdapter;
 import es.uniovi.sdm.alvfer.girodeitalia.R;
@@ -81,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         expListView.setGroupIndicator(getResources().getDrawable(R.drawable.my_group_statelist));
 
         // Crear intent
-        intent = new Intent(this, MainActivity2.class);
+        intent = new Intent(this, RecorridoActivity.class);
 
         // Listview Group click listener
         expListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
@@ -134,9 +132,9 @@ public class MainActivity extends AppCompatActivity {
                 if (listDataChild.get(listDataHeader.get
                         (groupPosition)).get(childPosition).toString().equals("Palmarés")) {
                     intent = new Intent(getApplicationContext(), PalmaresActivity.class);
-                } else {
-                    intent.putExtra(OPCION_ESCOGIDA, listDataChild.get(listDataHeader.get
-                            (groupPosition)).get(childPosition).toString());
+                } else if (listDataChild.get(listDataHeader.get
+                        (groupPosition)).get(childPosition).toString().equals("Lugares míticos")) {
+                    intent = new Intent(getApplicationContext(), LugaresMiticosActivity.class);
                 }
                 startActivity(intent);
                 return true;
@@ -149,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
         //FirebaseUtilidades.rellenarEtapas();
         //FirebaseUtilidades.rellenarCalendario();
         //FirebaseUtilidades.rellenarGanadores();
+        //FirebaseUtilidades.rellenarLugaresMiticos();
     }
 
     /**

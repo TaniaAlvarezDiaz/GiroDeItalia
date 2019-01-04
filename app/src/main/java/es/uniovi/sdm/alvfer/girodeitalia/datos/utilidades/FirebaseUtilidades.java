@@ -15,6 +15,7 @@ import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Dia;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Etapa;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Ganador;
+import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.LugarMitico;
 
 public class FirebaseUtilidades {
 
@@ -31,6 +32,9 @@ public class FirebaseUtilidades {
     public static DatabaseReference ganadoresDatabaseReference = firebaseDatabase
             .getReference()
             .child("Ganadores");
+    public static DatabaseReference lugaresMiticosDatabaseReference = firebaseDatabase
+            .getReference()
+            .child("LugaresMiticos");
 
     /**
      * Método para borrar todos los elementos del patrimonio que hay en la BBDD y volver a
@@ -438,6 +442,54 @@ public class FirebaseUtilidades {
                 }
                 Log.d("FIREBASE", "Ganadores insertados: " +
                         ganadoresInsertados);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.d("FIREBASE", "Ha ocurrido un fallo.");
+            }
+        });
+    }
+
+
+    /**
+     * Método para borrar todos los lugares miticos que hay en la BBDD y volver a
+     * introducirlos
+     */
+    public static void rellenarLugaresMiticos() {
+
+        Query queryRef = lugaresMiticosDatabaseReference.orderByChild("nombre");
+        queryRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int lugaresMiticosEliminados = 0;
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    snapshot.getRef().removeValue();
+                    lugaresMiticosEliminados++;
+                }
+                Log.d("FIREBASE", "Lugares miticos elimindos: " +
+                        lugaresMiticosEliminados);
+
+
+                ArrayList<LugarMitico> lugaresMiticos = new ArrayList<>();
+                for (int i = 0; i < 30; i++) {
+                    lugaresMiticos.add(new LugarMitico("El lugar" + i, "La descripcion" + i,
+                            "Los hechos" +
+                            "históricos" + i, "BasilicaDeSanPetronio.jpg", 43.914324, 12.918456));
+                }
+
+                Log.d("FIREBASE", "Lugares miticos a insertar: " + lugaresMiticos
+                        .size());
+
+                // Introducir los elementos en la BBDD
+                int lugaresMiticosInsertados = 0;
+                for (LugarMitico lugarMitico : lugaresMiticos) {
+                    lugaresMiticosDatabaseReference.push().setValue(lugarMitico);
+                    lugaresMiticosInsertados++;
+                }
+                Log.d("FIREBASE", "Lugares míticos insertados: " +
+                        lugaresMiticosInsertados);
             }
 
             @Override

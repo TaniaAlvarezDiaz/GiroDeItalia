@@ -9,7 +9,7 @@
     <string name="OpcionEscogida">Opcion escogida</string>
     <string name="Monumentos">Monumentos</string>
     <string name="Monumento">Monumento</string>
-    <string name="PhotoDescription">PhotoDescription</string>
+    <string name="PhotoDescription">Patrimonio de Italia</string>
     <string name="Descripcion">Descripción:</string>
     <string name="Lugar">Lugar:</string>
     <string name="Etapa">Etapa:</string>
@@ -49,6 +49,6 @@
     <string name="Tipo">Tipo:</string>
     <string name="Fecha">Fecha:</string>
     <string name="LugarElementoPat">Lugar:</string>
-    <string name="DescripcionElementoPat">Descripción:</string>
     <string name="EtapaElementoPat">Etapa:</string>
+    <string name="HechosHistoricos">Historia:</string>
 </resources>

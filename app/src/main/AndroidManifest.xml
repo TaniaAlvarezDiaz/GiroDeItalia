@@ -28,11 +28,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".vista.activities.MainActivity2"
-            android:configChanges="orientation"
-            android:parentActivityName=".vista.activities.MainActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".vista.activities.RecorridoActivity"
             android:configChanges="orientation"
             android:parentActivityName=".vista.activities.MainActivity"
@@ -62,15 +57,26 @@
             android:configChanges="orientation"
             android:parentActivityName=".vista.activities.MainActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".vista.activities.PalmaresActivity"
+        <activity
+            android:name=".vista.activities.PalmaresActivity"
             android:configChanges="orientation"
             android:parentActivityName=".vista.activities.MainActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vista.activities.LugaresMiticosActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".vista.activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vista.activities.LugarMiticoActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".vista.activities.LugaresMiticosActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".vista.activities.MapsActivity"
-            android:label="@string/title_activity_maps"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -82,6 +88,8 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
+
     </application>
 
 </manifest>
