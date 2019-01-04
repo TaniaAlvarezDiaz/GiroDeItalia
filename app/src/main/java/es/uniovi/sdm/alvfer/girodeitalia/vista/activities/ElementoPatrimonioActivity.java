@@ -34,10 +34,10 @@ public class ElementoPatrimonioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elemento_patrimonio);
 
-        textViewNombre = findViewById(R.id.textViewNombre);
-        textViewLugar = findViewById(R.id.textViewLugar);
-        textViewDescripcion = findViewById(R.id.textViewDescripcion);
-        textViewEtapa = findViewById(R.id.textViewEtapa);
+        textViewNombre = findViewById(R.id.textViewNombreElemento);
+        textViewLugar = findViewById(R.id.textViewLugarElemento);
+        textViewDescripcion = findViewById(R.id.textViewDescripcionElemento);
+        textViewEtapa = findViewById(R.id.textViewEtapaElemento);
 
         firebaseStorage = FirebaseStorage.getInstance();
         elementosPatrimonioImagenesStorageReference = firebaseStorage.getReference().child
@@ -50,14 +50,14 @@ public class ElementoPatrimonioActivity extends AppCompatActivity {
         String nombreImagen = elementoPatrimonio.getNombreImagen();
         StorageReference photoRef = elementosPatrimonioImagenesStorageReference.child(nombreImagen);
 
-        ImageView imageView = findViewById(R.id.imageViewPhoto);
+        ImageView imageView = findViewById(R.id.imageViewPhotoElementoPat);
 
         Glide.with(this).load(photoRef).apply(new RequestOptions().error(R.drawable.error_imagen)).into(imageView);
 
         textViewNombre.setText(elementoPatrimonio.getNombre());
-        textViewDescripcion.setText("Descripción: " + elementoPatrimonio.getDescripcion());
-        textViewLugar.setText("Lugar: " + elementoPatrimonio.getLugar());
-        textViewEtapa.setText("Etapa: " + elementoPatrimonio.getEtapa());
+        textViewDescripcion.setText(elementoPatrimonio.getDescripcion());
+        textViewLugar.setText(elementoPatrimonio.getLugar());
+        textViewEtapa.setText("" + elementoPatrimonio.getEtapa());
     }
 
     public void verEnMapa(View view) {

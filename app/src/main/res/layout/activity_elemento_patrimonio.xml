@@ -13,66 +13,119 @@
 
 
         <TextView
-            android:id="@+id/textViewNombre"
-            android:layout_width="wrap_content"
+            android:id="@+id/textViewNombreElemento"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageViewPhoto"
-            android:layout_width="244dp"
-            android:layout_height="215dp"
-            android:layout_margin="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
+            android:id="@+id/imageViewPhotoElementoPat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
             android:contentDescription="@string/PhotoDescription"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewNombre"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNombreElemento"
             app:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
-            android:id="@+id/textViewDescripcion"
+            android:id="@+id/textViewTituloLugarElemento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/LugarElementoPat"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewLugar" />
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPhotoElementoPat" />
 
         <TextView
-            android:id="@+id/textViewLugar"
+            android:id="@+id/textViewLugarElemento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewPhoto" />
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewTituloLugarElemento"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPhotoElementoPat" />
 
         <TextView
-            android:id="@+id/textViewEtapa"
+            android:id="@+id/textViewTituloEtapaElemento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:text="@string/EtapaElementoPat"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewDescripcion" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloLugarElemento" />
+
+        <TextView
+            android:id="@+id/textViewEtapaElemento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewTituloEtapaElemento"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLugarElemento" />
+
+        <TextView
+            android:id="@+id/textViewTituloDescripcionElemento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/DescripcionElementoPat"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloEtapaElemento" />
+
+        <TextView
+            android:id="@+id/textViewDescripcionElemento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloDescripcionElemento" />
 
         <Button
-            android:id="@+id/buttonVerEnMapa"
+            android:id="@+id/buttonVerEnMapaElemento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/colorPrimary"
             android:onClick="verEnMapa"
+            android:padding="8dp"
             android:text="@string/VerEnMapa"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewEtapa" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescripcionElemento" />
 
     </android.support.constraint.ConstraintLayout>
 
