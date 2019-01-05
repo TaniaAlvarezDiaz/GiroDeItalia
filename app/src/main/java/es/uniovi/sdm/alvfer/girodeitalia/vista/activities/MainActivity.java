@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Operaciones con la BBDD, colocarlas aquí para que se hagan al iniciar la app
-        FirebaseUtilidades.rellenarElementosPatrimonio();
+        //FirebaseUtilidades.rellenarElementosPatrimonio();
         //FirebaseUtilidades.rellenarEtapas();
         //FirebaseUtilidades.rellenarCalendario();
         //FirebaseUtilidades.rellenarGanadores();

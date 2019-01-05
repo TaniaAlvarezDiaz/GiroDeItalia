@@ -84,7 +84,7 @@ public class FirebaseUtilidades {
                         "Bologna",
                         "PinacotecaNacionalDeBologna.jpeg", "cultural", 44.497952, 11.353498));
                 elementosPatrimonio.add(new ElementoPatrimonio("Plaza de los Leones", "Esta plaza" +
-                        " es la más importante de la ciudad e Empoli. Debe su nombre a la fuente " +
+                        " es la más importante de la ciudad de Empoli. Debe su nombre a la fuente " +
                         "que se encuentra en su centro, la cual está adornada con leones, data de" +
                         " 1827 y es obra de Luigi Pampaloni.", 2, "Empoli", "PlazaDeLosLeones" +
                         ".jpg", "cultural", 43.719893, 10.945628));
@@ -212,51 +212,51 @@ public class FirebaseUtilidades {
                 // Elementos del patrimonio buscados por Tania
                 elementosPatrimonio.add(new ElementoPatrimonio("Catedral de Santa María Assunta",
                         "Construida entre 1514 y 1774, fue diseñada por Baldassarre Peruzzi," +
-                        "quien estuvo en contacto con Leonardo da Vinci.", 11, "Carpi",
+                                "quien estuvo en contacto con Leonardo da Vinci.", 11, "Carpi",
                         "CatedralDiSantaMariaAssunta.jpg", "historico",
-                        44.784713, 10.886276 ));
+                        44.784713, 10.886276));
                 elementosPatrimonio.add(new ElementoPatrimonio("Palacio Ducal",
                         "Erigido en 1561 sobre un antiguo castillo de la familia Sforza " +
-                        "por el Duque Octavio Farnesio, posee un fresco del famoso artista " +
-                        "Parmigianino.", 11, "Parma", "PalacioDucal.jpg",
-                        "historico",44.807838, 10.322316 ));
+                                "por el Duque Octavio Farnesio, posee un fresco del famoso artista " +
+                                "Parmigianino.", 11, "Parma", "PalacioDucal.jpg",
+                        "historico", 44.807838, 10.322316));
                 elementosPatrimonio.add(new ElementoPatrimonio("Catedral de la Asunción y Santa Justina",
                         "Empezada a construir en el siglo XII, es uno de los ejemplos más destacados " +
-                        "del arte Románico en Italia. Su fachada está hecha con mármol rosa de Verona " +
-                        "y arenisca, mientras en su interior la cúpula está decorada con frescos de "+
-                        "“il Guercino”.", 11, "Piacenza", "CatedralDePiacenza.jpg", "historico",
+                                "del arte Románico en Italia. Su fachada está hecha con mármol rosa de Verona " +
+                                "y arenisca, mientras en su interior la cúpula está decorada con frescos de " +
+                                "“il Guercino”.", 11, "Piacenza", "CatedralDePiacenza.jpg", "historico",
                         45.050316, 9.697510));
                 elementosPatrimonio.add(new ElementoPatrimonio("Museo de los Campeones",
                         "Dedicado a los famosos ciclistas Constante Girardengo (1893-1978) y " +
-                        "Fausto Coppi (1919-1960), alberga también información sobre la historia del ciclismo.",
+                                "Fausto Coppi (1919-1960), alberga también información sobre la historia del ciclismo.",
                         11, "Novi Ligure", "MuseoDeLosCampeones.jpg", "cultural",
                         44.763836, 8.778455));
                 elementosPatrimonio.add(new ElementoPatrimonio("Iglesia de San Giovanni",
                         "Del siglo XIII y de estilo gótico, destaca por su sobriedad exterior y " +
-                        "las bóvedas de crucería que alberga en su interior, donde también se " +
-                        "encuentran la capilla funeraria de los marqueses de Saluzzo y la tumba " +
-                        "del marqués Ludovico II.", 12, "Saluzzo",
+                                "las bóvedas de crucería que alberga en su interior, donde también se " +
+                                "encuentran la capilla funeraria de los marqueses de Saluzzo y la tumba " +
+                                "del marqués Ludovico II.", 12, "Saluzzo",
                         "IglesiaSaluzzo.jpg", "historico",
                         44.643572, 7.487894));
                 elementosPatrimonio.add(new ElementoPatrimonio("Catedral de San Donato",
                         "Situada en pleno centro histórico, en la Plaza de San Donato, data del " +
-                        "siglo XI y ha sido restaurada en varias ocasiones: en el siglo XVIII se " +
-                        "le añadieron motivos barrocos que fueron retirados en el siglo XIX para " +
-                        "recuperar sus formas originales, de estilo gótico.", 12, "Pinerolo",
+                                "siglo XI y ha sido restaurada en varias ocasiones: en el siglo XVIII se " +
+                                "le añadieron motivos barrocos que fueron retirados en el siglo XIX para " +
+                                "recuperar sus formas originales, de estilo gótico.", 12, "Pinerolo",
                         "CatedralDeSanDonato.jpg", "historico",
                         44.885719, 7.330134));
                 elementosPatrimonio.add(new ElementoPatrimonio("Santuario de Nuestra Señora de los Dolores",
                         "Situado en una colina, fue construido en el siglo XVIII. " +
-                        "Cuanta la leyenda que un hombre que se rompió una pierna en un lugar " +
-                        "solitario invocó a la Virgen, que lo sanó al instante. " +
-                        "Cada año se realizan en el tres procesiones, en los meses de junio, agosto y septiembre.",
+                                "Cuanta la leyenda que un hombre que se rompió una pierna en un lugar " +
+                                "solitario invocó a la Virgen, que lo sanó al instante. " +
+                                "Cada año se realizan en el tres procesiones, en los meses de junio, agosto y septiembre.",
                         13, "Colle del Lys", "SantuarioNuestraSeñoraDeLosDolores.jpg",
                         "historico", 45.159145, 7.405798));
                 elementosPatrimonio.add(new ElementoPatrimonio("Lago Serrú",
                         "Se trata de un lago artificial que forma parte de un complejo " +
-                        "de lagos artificiales que alimentan varias plantas hidroeléctricas. " +
-                        "Aunque el lago no es natural, el entorno que lo rodea es de una gran " +
-                        "belleza: se trata del Parque Nacional del Gran Paraíso.", 13,
+                                "de lagos artificiales que alimentan varias plantas hidroeléctricas. " +
+                                "Aunque el lago no es natural, el entorno que lo rodea es de una gran " +
+                                "belleza: se trata del Parque Nacional del Gran Paraíso.", 13,
                         "Ceresole Reale", "LagoSerru.jpg", "geografico",
                         45.459751, 7.125824));
                 elementosPatrimonio.add(new ElementoPatrimonio("Museo de Arte Sacro",
@@ -265,59 +265,149 @@ public class FirebaseUtilidades {
                         "cultural", 45.750537, 7.649729));
                 elementosPatrimonio.add(new ElementoPatrimonio("Teatro romano",
                         "Su fachada sur de 22 metros de altura aún está en pie, " +
-                        "con varias arcadas superpuestas. También se conservan la parte inferior " +
-                        "de la cávea (gradas) y los cimientos de la scaena. Durante la Edad Media " +
-                        "se adosaron el mismo varias construcciones que recientemente se han demolido "
-                        + "para restaurar el teatro.", 14, "Aosta",
+                                "con varias arcadas superpuestas. También se conservan la parte inferior " +
+                                "de la cávea (gradas) y los cimientos de la scaena. Durante la Edad Media " +
+                                "se adosaron el mismo varias construcciones que recientemente se han demolido "
+                                + "para restaurar el teatro.", 14, "Aosta",
                         "TeatroDeAosta.jpg", "cultural", 45.738563,
                         7.322363));
                 elementosPatrimonio.add(new ElementoPatrimonio("Catedral de Santa María Assunta",
                         "Comenzada a construir en el siglo IX, fue terminada a mediados del " +
-                        "siglo XIX, por lo que su construcción posee características del Románico, del " +
-                        "Barroco y del estilo neoclásico. Parece que bajo la misma hubo un templo romano " +
-                        "que data del siglo I a.C. y, posteriormente, iglesias cristianas datadas de los siglos IV y V.",
+                                "siglo XIX, por lo que su construcción posee características del Románico, del " +
+                                "Barroco y del estilo neoclásico. Parece que bajo la misma hubo un templo romano " +
+                                "que data del siglo I a.C. y, posteriormente, iglesias cristianas datadas de los siglos IV y V.",
                         15, "Ivrea", "CatedralDeIvrea.jpg",
                         "historico", 45.468172, 7.875436));
                 elementosPatrimonio.add(new ElementoPatrimonio("Castillo de Ivrea",
                         "Conocido como el “castillo de las torres rojas”, se comenzó a " +
-                        "construir a mediados del siglo XIV con funciones defensivas. Entre 1700 y " +
-                        "1970 fue utilizado como prisión.", 15, "Ivrea",
+                                "construir a mediados del siglo XIV con funciones defensivas. Entre 1700 y " +
+                                "1970 fue utilizado como prisión.", 15, "Ivrea",
                         "CastilloDeIvrea.jpg", "historico",
                         45.467940, 7.874129));
                 elementosPatrimonio.add(new ElementoPatrimonio("Oasi WWF del Bassone-Torbiere di Albate",
                         "Se trata de una reserva natural de 90 hectáreas de terreno " +
-                        "situada 6 km al sur de Como. Consta de un césped, una zona arbolada y un " +
-                        "pantano donde habitan casi un centenar de especies.", 15,
+                                "situada 6 km al sur de Como. Consta de un césped, una zona arbolada y un " +
+                                "pantano donde habitan casi un centenar de especies.", 15,
                         "Como", "OasiComo.jpg", "geografico",
                         45.766832, 9.092011));
                 elementosPatrimonio.add(new ElementoPatrimonio("Galería de la Academia de Bellas Artes Tadini",
                         "Situada en el Palacio Tadini, de estilo Neoclásico y la sede " +
-                        "de la Academia, esta galería alberga una prestigiosa colección de arte que " +
-                        "incluye pinturas de Giovanni Battista Crespi, entre otros, además de una " +
-                        "colección de terracota, porcelana, armaduras y mobiliario.", 16,
+                                "de la Academia, esta galería alberga una prestigiosa colección de arte que " +
+                                "incluye pinturas de Giovanni Battista Crespi, entre otros, además de una " +
+                                "colección de terracota, porcelana, armaduras y mobiliario.", 16,
                         "Lovere", "GaleriaLovere.jpg", "cultural",
                         45.814976, 10.073104));
                 elementosPatrimonio.add(new ElementoPatrimonio("Lago di Valbione",
                         "Un estanque donde se puede practicar la pesca. Además, " +
-                        "el lugar dispone de un club de golf y un bar-restaurante. Se puede llegar " +
-                        "al lugar en telesilla, en coche o a pie a través de senderos.", 16,
+                                "el lugar dispone de un club de golf y un bar-restaurante. Se puede llegar " +
+                                "al lugar en telesilla, en coche o a pie a través de senderos.", 16,
                         "Ponte di Legno", "LagoDiValbione.jpg", "geografico",
                         46.247488, 10.507010));
                 elementosPatrimonio.add(new ElementoPatrimonio("Pista Südtirol Arena",
                         "Esta pista está diseñada para practicar biatlón, " +
-                        "un deporte de invierno que combina el esquí con el tiro deportivo. " +
-                        "Está situada en un paraje de gran belleza donde el 98 % de la población " +
-                        "habla alemán.", 17, "Rasun Anterselva/Rasen-Antholz",
+                                "un deporte de invierno que combina el esquí con el tiro deportivo. " +
+                                "Está situada en un paraje de gran belleza donde el 98 % de la población " +
+                                "habla alemán.", 17, "Rasun Anterselva/Rasen-Antholz",
                         "PistaBiatlonAnterselva.jpg", "geografico",
                         46.884438, 12.153711));
                 elementosPatrimonio.add(new ElementoPatrimonio("Castillo Roncolo",
                         "Este castillo medieval del siglo XIII está situado sobre " +
-                        "un peñasco en el municipio de Renon, aunque es propiedad de la ciudad de Bolzano. " +
-                        "Lo más destacado es que posee en su interior una gran cantidad de frescos " +
-                        "del siglo XV que representan aspectos de la vida y la cultura cortesanas, " +
-                        "por los que el castillo ha sido apodado “la mansión ilustrada”.", 17,
+                                "un peñasco en el municipio de Renon, aunque es propiedad de la ciudad de Bolzano. " +
+                                "Lo más destacado es que posee en su interior una gran cantidad de frescos " +
+                                "del siglo XV que representan aspectos de la vida y la cultura cortesanas, " +
+                                "por los que el castillo ha sido apodado “la mansión ilustrada”.", 17,
                         "Bolzano/Bozen", "CastilloRoncolo.jpg", "historico",
                         46.517388, 11.358953));
+                elementosPatrimonio.add(new ElementoPatrimonio("Villa " +
+                        "Farsetti", "Inspirada en el palacio francés de " +
+                        "Versalles, fue construida en el siglo XVIII por " +
+                        "voluntad del abad Filippo Fasetti. De estética " +
+                        "rococó, posee tres pisos y está decorada con 38 " +
+                        "columnas procedentes del Templo de la Concordia, " +
+                        "situado en el Foro romano de Roma.", 18, "Santa " +
+                        "Maria di Sala", "VillaFarsetti.jpg", "historico",
+                        45.507008, 12.033467));
+                elementosPatrimonio.add(new ElementoPatrimonio("Parque " +
+                        "Natural de Fanes-Sennes-Braies", "Este parque de más" +
+                        " de 25 hectáreas es uno de los más grandes del Tirol" +
+                        " del Sur. Posee picos de 3000 m de altura, grandes " +
+                        "mesetas y seis lagos. Aunque poseyó lobos, osos y " +
+                        "linces, estos se extinguieron en el siglo XIX. Ahora" +
+                        " viven corzos, venados, tejones, zorros, íbices de " +
+                        "los Alpes y urogallos negros, así como marmotas " +
+                        "alpinas, símbolo del parque.", 18, "Valdaora/Olang",
+                        "LagoDiBraisParqueFannes.jpg", "geografico",
+                        46.666222, 12.034924));
+                elementosPatrimonio.add(new ElementoPatrimonio("Catedral de " +
+                        "San Pedro Apóstol", "Originaria del siglo VI, en los" +
+                        " siglos XI y XII adoptó el estilo Románico de la " +
+                        "época. Ya en el siglo XVIII, se reconstruyó el " +
+                        "edificio al estilo Neoclásico. Destacan sus siete " +
+                        "cúpulas y su majestuoso interior. Además, una cripta" +
+                        " alberga las tumbas de los obispos de Treviso.", 19,
+                        "Treviso", "CatedralSanPedroApostol.jpg", "historico",
+                        45.666389,12.242778));
+                elementosPatrimonio.add(new ElementoPatrimonio("Parque " +
+                        "Natural Paneveggio-Pale di San Martino",
+                        "Establecido en 1967, alberga una gran cantidad de " +
+                                "fauna y flora. Destaca el Pale di San " +
+                                "Martino, un grupo de montañas que es el más " +
+                                "grande de todos los Dolomitas (un conjunto " +
+                                "de sierras de los Alpes orientales " +
+                                "italianos). El Cimon della Pala es el pico " +
+                                "más famoso del Pale di San Martino, con 3184" +
+                                " m de altura.", 19, "San Martino di " +
+                        "Castrozza", "ParqueDeSanMartino.jpg", "geografico",
+                        46.278913, 11.780173));
+                elementosPatrimonio.add(new ElementoPatrimonio("Borgo " +
+                        "Colmellere", "Pequeña población originaria del siglo" +
+                        " X situada al suroeste de Combai. Conserva su " +
+                        "estructura medieval, con varias casas, un juzgado " +
+                        "con patio, un pozo y un horno. El pueblo, que posee " +
+                        "un restaurante, está rodeado de viñedos.", 19,
+                        "Combai", "BorgoColmellere.jpg", "geografico",
+                        45.926664, 12.063986));
+                elementosPatrimonio.add(new ElementoPatrimonio("Galería de " +
+                        "Arte Moderno “Carlo Rizzarda”", "Situada en el " +
+                        "interior del Palazzo Cumano (s. XVI), la galería " +
+                        "custodia 196 obras entre las que se incluyen " +
+                        "pinturas, muebles y objetos de arte decorativo de " +
+                        "artistas como Felice Casorati y Carlo Carrà. Además," +
+                        " la galería alberga más de 400 obras de hierro " +
+                        "forjado del artista italiano de Art Nouveau Carlo " +
+                        "Rizzarda, uno de los más importantes del país a " +
+                        "principios del siglo XX.", 20, "Feltre",
+                        "GaleriaDeArteFeltre.jpg", "cultural", 46.018205,
+                        11.907843));
+                elementosPatrimonio.add(new ElementoPatrimonio("Arena di " +
+                        "Verona", "Se trata de un anfiteatro de época romana " +
+                        "situado en el centro de la ciudad, enfrente de la " +
+                        "Gran Guardia. Es el tercero más grande de Italia " +
+                        "después del Coliseo de Roma y el Anfiteatro de Capua" +
+                        " y el mejor conservado de todos gracias a las " +
+                        "continuas obras de restauración que se han venido " +
+                        "haciendo desde el siglo XVII. Con capacidad para 32 " +
+                        "056 personas, desde 1913 se utiliza especialmente en" +
+                        " verano para celebrar el Festival de la Ópera de " +
+                        "Verona, en el que se representan cuatro óperas, " +
+                        "además de conciertos de música sinfónica y ballet.",
+                        21, "Verona", "ArenaDiVerona.jpg", "historico",
+                        45.439146, 10.994357));
+                elementosPatrimonio.add(new ElementoPatrimonio("Palazzo della" +
+                        " Gran Guardia", "Situado frente al Arena, este " +
+                        "palacio que comenzó a construirse en el siglo XVII " +
+                        "no fue terminado hasta el siglo XIX. De estilo " +
+                        "barroco, el edificio consta de dos cuerpos: el " +
+                        "inferior está compuesto por un pórtico de sillares " +
+                        "de piedra con trece arcos, mientras que el cuerpo " +
+                        "superior consta de quince ventanales entre los que " +
+                        "se encuentran columnas pareadas. Algunos de los " +
+                        "vanos están coronados con pequeños frontones curvos " +
+                        "y triangulares. En la actualidad, la Gran Guardia se" +
+                        " usa como palacio de exposiciones, congresos y " +
+                        "eventos culturales.", 21, "Verona", "PalacioVerona" +
+                        ".jpg", "historico", 45.437995, 10.992260));
+
 
                 Log.d("FIREBASE", "Elementos del patrimonio a insertar: " + elementosPatrimonio
                         .size());
