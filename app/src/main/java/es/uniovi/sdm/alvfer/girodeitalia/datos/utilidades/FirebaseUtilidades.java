@@ -245,7 +245,79 @@ public class FirebaseUtilidades {
                         "recuperar sus formas originales, de estilo gótico.", 12, "Pinerolo",
                         "CatedralDeSanDonato.jpg", "historico",
                         44.885719, 7.330134));
-
+                elementosPatrimonio.add(new ElementoPatrimonio("Santuario de Nuestra Señora de los Dolores",
+                        "Situado en una colina, fue construido en el siglo XVIII. " +
+                        "Cuanta la leyenda que un hombre que se rompió una pierna en un lugar " +
+                        "solitario invocó a la Virgen, que lo sanó al instante. " +
+                        "Cada año se realizan en el tres procesiones, en los meses de junio, agosto y septiembre.",
+                        13, "Colle del Lys", "SantuarioNuestraSeñoraDeLosDolores.jpg",
+                        "historico", 45.159145, 7.405798));
+                elementosPatrimonio.add(new ElementoPatrimonio("Lago Serrú",
+                        "Se trata de un lago artificial que forma parte de un complejo " +
+                        "de lagos artificiales que alimentan varias plantas hidroeléctricas. " +
+                        "Aunque el lago no es natural, el entorno que lo rodea es de una gran " +
+                        "belleza: se trata del Parque Nacional del Gran Paraíso.", 13,
+                        "Ceresole Reale", "LagoSerru.jpg", "geografico",
+                        45.459751, 7.125824));
+                elementosPatrimonio.add(new ElementoPatrimonio("Museo de Arte Sacro",
+                        "Situado en la iglesia parroquial, alberga diversos objetos como relicarios y vestimentas.",
+                        14, "Saint-Vincent", "IglesiaSanVincent.jpg",
+                        "cultural", 45.750537, 7.649729));
+                elementosPatrimonio.add(new ElementoPatrimonio("Teatro romano",
+                        "Su fachada sur de 22 metros de altura aún está en pie, " +
+                        "con varias arcadas superpuestas. También se conservan la parte inferior " +
+                        "de la cávea (gradas) y los cimientos de la scaena. Durante la Edad Media " +
+                        "se adosaron el mismo varias construcciones que recientemente se han demolido "
+                        + "para restaurar el teatro.", 14, "Aosta",
+                        "TeatroDeAosta.jpg", "cultural", 45.738563,
+                        7.322363));
+                elementosPatrimonio.add(new ElementoPatrimonio("Catedral de Santa María Assunta",
+                        "Comenzada a construir en el siglo IX, fue terminada a mediados del " +
+                        "siglo XIX, por lo que su construcción posee características del Románico, del " +
+                        "Barroco y del estilo neoclásico. Parece que bajo la misma hubo un templo romano " +
+                        "que data del siglo I a.C. y, posteriormente, iglesias cristianas datadas de los siglos IV y V.",
+                        15, "Ivrea", "CatedralDeIvrea.jpg",
+                        "historico", 45.468172, 7.875436));
+                elementosPatrimonio.add(new ElementoPatrimonio("Castillo de Ivrea",
+                        "Conocido como el “castillo de las torres rojas”, se comenzó a " +
+                        "construir a mediados del siglo XIV con funciones defensivas. Entre 1700 y " +
+                        "1970 fue utilizado como prisión.", 15, "Ivrea",
+                        "CastilloDeIvrea.jpg", "historico",
+                        45.467940, 7.874129));
+                elementosPatrimonio.add(new ElementoPatrimonio("Oasi WWF del Bassone-Torbiere di Albate",
+                        "Se trata de una reserva natural de 90 hectáreas de terreno " +
+                        "situada 6 km al sur de Como. Consta de un césped, una zona arbolada y un " +
+                        "pantano donde habitan casi un centenar de especies.", 15,
+                        "Como", "OasiComo.jpg", "geografico",
+                        45.766832, 9.092011));
+                elementosPatrimonio.add(new ElementoPatrimonio("Galería de la Academia de Bellas Artes Tadini",
+                        "Situada en el Palacio Tadini, de estilo Neoclásico y la sede " +
+                        "de la Academia, esta galería alberga una prestigiosa colección de arte que " +
+                        "incluye pinturas de Giovanni Battista Crespi, entre otros, además de una " +
+                        "colección de terracota, porcelana, armaduras y mobiliario.", 16,
+                        "Lovere", "GaleriaLovere.jpg", "cultural",
+                        45.814976, 10.073104));
+                elementosPatrimonio.add(new ElementoPatrimonio("Lago di Valbione",
+                        "Un estanque donde se puede practicar la pesca. Además, " +
+                        "el lugar dispone de un club de golf y un bar-restaurante. Se puede llegar " +
+                        "al lugar en telesilla, en coche o a pie a través de senderos.", 16,
+                        "Ponte di Legno", "LagoDiValbione.jpg", "geografico",
+                        46.247488, 10.507010));
+                elementosPatrimonio.add(new ElementoPatrimonio("Pista Südtirol Arena",
+                        "Esta pista está diseñada para practicar biatlón, " +
+                        "un deporte de invierno que combina el esquí con el tiro deportivo. " +
+                        "Está situada en un paraje de gran belleza donde el 98 % de la población " +
+                        "habla alemán.", 17, "Rasun Anterselva/Rasen-Antholz",
+                        "PistaBiatlonAnterselva.jpg", "geografico",
+                        46.884438, 12.153711));
+                elementosPatrimonio.add(new ElementoPatrimonio("Castillo Roncolo",
+                        "Este castillo medieval del siglo XIII está situado sobre " +
+                        "un peñasco en el municipio de Renon, aunque es propiedad de la ciudad de Bolzano. " +
+                        "Lo más destacado es que posee en su interior una gran cantidad de frescos " +
+                        "del siglo XV que representan aspectos de la vida y la cultura cortesanas, " +
+                        "por los que el castillo ha sido apodado “la mansión ilustrada”.", 17,
+                        "Bolzano/Bozen", "CastilloRoncolo.jpg", "historico",
+                        46.517388, 11.358953));
 
                 Log.d("FIREBASE", "Elementos del patrimonio a insertar: " + elementosPatrimonio
                         .size());
