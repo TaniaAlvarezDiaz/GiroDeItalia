@@ -19,6 +19,8 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
 import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.ElementoPatrimonioActivity;
@@ -73,6 +75,12 @@ public class PatrimonioHistoricoFragment extends ListFragment {
                             .class);
                     elementosPatrimonioHistorico.add(elementoPatrimonio);
                 }
+                Collections.sort(elementosPatrimonioHistorico, new Comparator<ElementoPatrimonio>() {
+                    @Override
+                    public int compare(ElementoPatrimonio ep1, ElementoPatrimonio ep2) {
+                        return ep1.getNombre().compareToIgnoreCase(ep2.getNombre());
+                    }
+                });
                 if (getActivity() != null) {
                     ((PatrimonioActivity) getActivity()).getProgressBar().setVisibility(View.GONE);
                 }

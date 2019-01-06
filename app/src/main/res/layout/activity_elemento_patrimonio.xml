@@ -53,11 +53,14 @@
 
         <TextView
             android:id="@+id/textViewLugarElemento"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:textAlignment="textStart"
             android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textViewTituloLugarElemento"
             app:layout_constraintTop_toBottomOf="@+id/imageViewPhotoElementoPat" />
 
@@ -71,15 +74,18 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTituloLugarElemento" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewLugarElemento" />
 
         <TextView
             android:id="@+id/textViewEtapaElemento"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:textAlignment="textStart"
             android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textViewTituloEtapaElemento"
             app:layout_constraintTop_toBottomOf="@+id/textViewLugarElemento" />
 
@@ -93,7 +99,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTituloEtapaElemento" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewEtapaElemento" />
 
         <TextView
             android:id="@+id/textViewDescripcionElemento"
