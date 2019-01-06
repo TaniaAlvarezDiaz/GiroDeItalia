@@ -280,7 +280,7 @@ public class FirebaseUtilidades {
                         "Conocido como el “castillo de las torres rojas”, se comenzó a " +
                                 "construir a mediados del siglo XIV con funciones defensivas. Entre 1700 y " +
                                 "1970 fue utilizado como prisión.", 15, "Ivrea",
-                        "CastilloDeIvrea.jpg", "historico",
+                        "CastilloDeIvrea.jpeg", "historico",
                         45.467940, 7.874129));
                 elementosPatrimonio.add(new ElementoPatrimonio("Oasi WWF del Bassone-Torbiere di Albate",
                         "Se trata de una reserva natural de 90 hectáreas de terreno " +
@@ -739,7 +739,7 @@ public class FirebaseUtilidades {
                         "(Raffaele Illiano, Italia); en 2006 y 2010 (Ivan Basso, Italia); en " +
                         "2008 se hizo con la victoria el español Toni Colom; en 2012 (Oliver " +
                         "Zaugg, Suiza); en 2015 (Steven Kruijswijk, Países Bajos); y en 2017, cuando el " +
-                        "vencedor fue el español Luis León Sánchez.", "PassoDelMortirolo.jpg",
+                        "vencedor fue el español Luis León Sánchez.", "PassoDelMortirolo.JPG",
                         46.247940, 10.298304));
                 lugaresMiticos.add(new LugarMitico("Tres Cimas de Lavaredo", "Son tres picos " +
                         "compuestos por dolomías. Sus nombres son: Cima Piccola (es el pico " +
