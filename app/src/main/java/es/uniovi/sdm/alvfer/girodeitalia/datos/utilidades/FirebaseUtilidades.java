@@ -733,7 +733,7 @@ public class FirebaseUtilidades {
                         "italiano, conocido también como Puerto de la Foppa, que comunica las " +
                         "zonas alpinas de la alta Valtellina y la alta Val Camonica.", "Fue " +
                         "ascendido en 12 ocasiones en el Giro de Italia: en 1990, donde se hizo " +
-                        "con la victoria el venezolano Leoonardo Sierra; en 1991 (Franco " +
+                        "con la victoria el venezolano Leonardo Sierra; en 1991 (Franco " +
                         "Chioccioli, Italia); en 1994 (Marco Pantani, Italia); en 1996 y 1999 " +
                         "(Ivan Gotti, Italia); en 1997 (Waldimir Belli, Italia); en 2004 " +
                         "(Raffaele Illiano, Italia); en 2006 y 2010 (Ivan Basso, Italia); en " +
