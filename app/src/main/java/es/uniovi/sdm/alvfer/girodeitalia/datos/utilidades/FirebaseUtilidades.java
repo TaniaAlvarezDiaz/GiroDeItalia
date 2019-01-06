@@ -108,7 +108,7 @@ public class FirebaseUtilidades {
                                 " ciclismo y trekking, debido a la cantidad senderos naturales " +
                                 "que" +
                                 " existen en ellas. Se encuentran en una zona natural protegida, " +
-                                "en cuyos alrededores existen numerosas iglesisas, poblaciones " +
+                                "en cuyos alrededores existen numerosas iglesias, poblaciones " +
                                 "históricas y casas rurales.", 3, "Vinci",
                         "ColinasDeMontalbano.jpg", "geografico", 43.791473, 10.980283));
                 elementosPatrimonio.add(new ElementoPatrimonio("Laguna de Orbetello",
@@ -211,13 +211,13 @@ public class FirebaseUtilidades {
 
                 // Elementos del patrimonio buscados por Tania
                 elementosPatrimonio.add(new ElementoPatrimonio("Catedral de Santa María Assunta",
-                        "Construida entre 1514 y 1774, fue diseñada por Baldassarre Peruzzi," +
+                        "Construida entre 1514 y 1774, fue diseñada por Baldassarre Peruzzi, " +
                                 "quien estuvo en contacto con Leonardo da Vinci.", 11, "Carpi",
                         "CatedralDiSantaMariaAssunta.jpg", "historico",
                         44.784713, 10.886276));
                 elementosPatrimonio.add(new ElementoPatrimonio("Palacio Ducal",
-                        "Erigido en 1561 sobre un antiguo castillo de la familia Sforza " +
-                                "por el Duque Octavio Farnesio, posee un fresco del famoso artista " +
+                        "Erigido por el Duque Octavio Farnesio en 1561 sobre un antiguo castillo de la familia Sforza, " +
+                                "posee un fresco del famoso artista " +
                                 "Parmigianino.", 11, "Parma", "PalacioDucal.jpg",
                         "historico", 44.807838, 10.322316));
                 elementosPatrimonio.add(new ElementoPatrimonio("Catedral de la Asunción y Santa Justina",
@@ -267,7 +267,7 @@ public class FirebaseUtilidades {
                         "Su fachada sur de 22 metros de altura aún está en pie, " +
                                 "con varias arcadas superpuestas. También se conservan la parte inferior " +
                                 "de la cávea (gradas) y los cimientos de la scaena. Durante la Edad Media " +
-                                "se adosaron el mismo varias construcciones que recientemente se han demolido "
+                                "se adosaron al mismo varias construcciones que recientemente se han demolido "
                                 + "para restaurar el teatro.", 14, "Aosta",
                         "TeatroDeAosta.jpg", "cultural", 45.738563,
                         7.322363));
@@ -321,7 +321,7 @@ public class FirebaseUtilidades {
                 elementosPatrimonio.add(new ElementoPatrimonio("Villa " +
                         "Farsetti", "Inspirada en el palacio francés de " +
                         "Versalles, fue construida en el siglo XVIII por " +
-                        "voluntad del abad Filippo Fasetti. De estética " +
+                        "voluntad del abad Filippo Farsetti. De estética " +
                         "rococó, posee tres pisos y está decorada con 38 " +
                         "columnas procedentes del Templo de la Concordia, " +
                         "situado en el Foro romano de Roma.", 18, "Santa " +
@@ -368,7 +368,7 @@ public class FirebaseUtilidades {
                         "Combai", "BorgoColmellere.jpg", "geografico",
                         45.926664, 12.063986));
                 elementosPatrimonio.add(new ElementoPatrimonio("Galería de " +
-                        "Arte Moderno “Carlo Rizzarda”", "Situada en el " +
+                        "Arte Moderno Carlo Rizzarda", "Situada en el " +
                         "interior del Palazzo Cumano (s. XVI), la galería " +
                         "custodia 196 obras entre las que se incluyen " +
                         "pinturas, muebles y objetos de arte decorativo de " +
@@ -668,13 +668,36 @@ public class FirebaseUtilidades {
                 Log.d("FIREBASE", "Lugares miticos elimindos: " +
                         lugaresMiticosEliminados);
 
-
+                //Crear los lugares míticos
                 ArrayList<LugarMitico> lugaresMiticos = new ArrayList<>();
-                for (int i = 0; i < 30; i++) {
-                    lugaresMiticos.add(new LugarMitico("El lugar" + i, "La descripcion" + i,
-                            "Los hechos" +
-                            "históricos" + i, "BasilicaDeSanPetronio.jpg", 43.914324, 12.918456));
-                }
+                lugaresMiticos.add(new LugarMitico("Colle dell'Agnello", "Es " +
+                        "un paso alpino de 2748 metros de altitud situado en " +
+                        "el contexto orográfico de los Alpes de Cott. Conecta" +
+                        " Italia con Francia. Su colina fue destino de varias" +
+                        " etapas del Tour de Francia y del Giro de Italia.",
+                        "Ha sido escalada 4 veces en el Giro de Italia: en " +
+                                "1994, en el 2000, en 2007 y en 2016. Los " +
+                                "primeros ciclistas que llegaron a la cima " +
+                                "son: Stefano Zanini (Italia), José Jaime " +
+                                "González (Colombia), Yoann Le Boulanger " +
+                                "(Francia) y Michele Scarponi (Italia), " +
+                                "respectivamente", "ColleDellAgnello.jpg",
+                        44.683800, 6.979500));
+                lugaresMiticos.add(new LugarMitico("Monte Zoncolan", "Es una " +
+                        "montaña de 1750 metros en los Alpes Cárnicos que " +
+                        "cuenta con una estación de esquí con casi 30 km de " +
+                        "pistas, una de las más importantes de la región de " +
+                        "Friul-Venecia Julia.", "Esta montaña fue ascendida 6" +
+                        " veces durante el Giro de Italia. Los dos primeros " +
+                        "años, en 2003 y en 2007 el ganador fue Gilberto " +
+                        "Simoni (Italia), por lo que a partir de este " +
+                        "momento, el monte Zoncolan fue apodado la montaña " +
+                        "Simoni. Además, fue ascendida en 2010, cuyo ganador " +
+                        "fue Ivan Basso (Italia); en 2011, cuyo ganador fue " +
+                        "el español Igor Antón; en 2014, donde se hizo con la" +
+                        " victoria Michael Rogers (Australia); y en 2018, " +
+                        "donde el ganador fue Chris Froome (Reino Unido).",
+                        "CimaZoncalan.jpg", 46.499701, 12.919230));
 
                 Log.d("FIREBASE", "Lugares miticos a insertar: " + lugaresMiticos
                         .size());
