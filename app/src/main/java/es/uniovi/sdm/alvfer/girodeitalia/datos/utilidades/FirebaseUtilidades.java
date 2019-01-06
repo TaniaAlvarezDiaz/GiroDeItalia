@@ -245,9 +245,9 @@ public class FirebaseUtilidades {
                         44.885719, 7.330134));
                 elementosPatrimonio.add(new ElementoPatrimonio("Santuario de Nuestra Señora de los Dolores",
                         "Situado en una colina, fue construido en el siglo XVIII. " +
-                                "Cuanta la leyenda que un hombre que se rompió una pierna en un lugar " +
+                                "Cuenta la leyenda que un hombre que se rompió una pierna en un lugar " +
                                 "solitario invocó a la Virgen, que lo sanó al instante. " +
-                                "Cada año se realizan en el tres procesiones, en los meses de junio, agosto y septiembre.",
+                                "Cada año se realizan en él tres procesiones, en los meses de junio, agosto y septiembre.",
                         13, "Colle del Lys", "SantuarioNuestraSeñoraDeLosDolores.jpg",
                         "historico", 45.159145, 7.405798));
                 elementosPatrimonio.add(new ElementoPatrimonio("Lago Serrú",
@@ -344,7 +344,7 @@ public class FirebaseUtilidades {
                         "cúpulas y su majestuoso interior. Además, una cripta" +
                         " alberga las tumbas de los obispos de Treviso.", 19,
                         "Treviso", "CatedralSanPedroApostol.jpg", "historico",
-                        45.666389,12.242778));
+                        45.666446, 12.243034));
                 elementosPatrimonio.add(new ElementoPatrimonio("Parque " +
                         "Natural Paneveggio-Pale di San Martino",
                         "Establecido en 1967, alberga una gran cantidad de " +
