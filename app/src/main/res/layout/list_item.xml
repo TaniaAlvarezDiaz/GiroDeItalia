@@ -12,6 +12,7 @@
         android:paddingEnd="?android:attr/expandableListPreferredChildPaddingLeft"
         android:paddingStart="?android:attr/expandableListPreferredChildPaddingLeft"
         android:paddingTop="7dp"
+        android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="18sp" />
 
