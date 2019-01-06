@@ -75,7 +75,6 @@
         <activity
             android:name=".vista.activities.MapsActivity"
             android:configChanges="orientation"
-            android:label="@string/title_activity_maps"
             android:screenOrientation="portrait" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

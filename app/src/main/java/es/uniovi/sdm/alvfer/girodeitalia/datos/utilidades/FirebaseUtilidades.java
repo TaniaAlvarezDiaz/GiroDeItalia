@@ -450,8 +450,6 @@ public class FirebaseUtilidades {
                         etapasEliminadas);
 
                 // Crear las etapas
-                // https://es.wikipedia.org/wiki/Giro_de_Italia_2019#Clasificaciones_finales
-                // Hay 3 contrarrelojes individuales, en las etapas 1, 9 y 21
                 ArrayList<Etapa> etapas = new ArrayList<>();
                 etapas.add(new Etapa("Bologna", "Bologna (San Luca)",
                         "Contrarreloj individual", 1, 8, "11-Mayo"));
