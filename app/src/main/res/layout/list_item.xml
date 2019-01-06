@@ -13,6 +13,6 @@
         android:paddingTop="7dp"
         android:paddingBottom="7dp"
         android:paddingStart="?android:attr/expandableListPreferredChildPaddingLeft"
-        android:paddingEnd="?android:attr/expandableListPreferredChildPaddingLeft"/>
+        android:paddingEnd="?android:attr/expandableListPreferredChildPaddingLeft" />
 
 </LinearLayout>
