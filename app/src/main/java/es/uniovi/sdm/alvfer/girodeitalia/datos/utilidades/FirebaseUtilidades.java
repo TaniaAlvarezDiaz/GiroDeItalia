@@ -16,6 +16,7 @@ import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.ElementoPatrimonio;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Etapa;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.Ganador;
 import es.uniovi.sdm.alvfer.girodeitalia.datos.modelo.LugarMitico;
+import es.uniovi.sdm.alvfer.girodeitalia.vista.activities.LugaresMiticosActivity;
 
 public class FirebaseUtilidades {
 
@@ -207,9 +208,6 @@ public class FirebaseUtilidades {
                                 " en la lista del Patrimonio de la Humanidad en 1996.", 10,
                         "Ravenna",
                         "MausoleoDeGalaPlacidia.jpg", "historico", 44.421228, 12.197081));
-
-
-                // Elementos del patrimonio buscados por Tania
                 elementosPatrimonio.add(new ElementoPatrimonio("Catedral de Santa María Assunta",
                         "Construida entre 1514 y 1774, fue diseñada por Baldassarre Peruzzi, " +
                                 "quien estuvo en contacto con Leonardo da Vinci.", 11, "Carpi",
@@ -501,7 +499,7 @@ public class FirebaseUtilidades {
                 Log.d("FIREBASE", "Etapas a insertar: " + etapas
                         .size());
 
-                // Introducir los elementos de las etapas en la BBDD
+                // Introducir las etapas en la BBDD
                 int etapasInsertadas = 0;
                 for (Etapa etapa : etapas) {
                     etapasDatabaseReference.push().setValue(etapa);
@@ -568,7 +566,7 @@ public class FirebaseUtilidades {
                 Log.d("FIREBASE", "Dias a insertar: " + dias
                         .size());
 
-                // Introducir los elementos de las etapas en la BBDD
+                // Introducir los dias del calendario en la BBDD
                 int diasInsertados = 0;
                 for (Dia d : dias) {
                     calendarioDatabaseReference.push().setValue(d);
@@ -591,7 +589,7 @@ public class FirebaseUtilidades {
      */
     public static void rellenarGanadores() {
 
-        // Borrar las etapas de la BBDD
+        // Borrar los ganadores de la BBDD
         Query queryRef = ganadoresDatabaseReference.orderByChild("year");
         queryRef.addListenerForSingleValueEvent(new ValueEventListener() {
 
@@ -631,7 +629,7 @@ public class FirebaseUtilidades {
                 Log.d("FIREBASE", "Ganadores a insertar: " + ganadores
                         .size());
 
-                // Introducir los elementos en la BBDD
+                // Introducir los ganadores en la BBDD
                 int ganadoresInsertados = 0;
                 for (Ganador ganador : ganadores) {
                     ganadoresDatabaseReference.push().setValue(ganador);
@@ -672,37 +670,91 @@ public class FirebaseUtilidades {
                 ArrayList<LugarMitico> lugaresMiticos = new ArrayList<>();
                 lugaresMiticos.add(new LugarMitico("Colle dell'Agnello", "Es " +
                         "un paso alpino de 2748 metros de altitud situado en " +
-                        "el contexto orográfico de los Alpes de Cott. Conecta" +
+                        "el contexto orográfico de los Alpes de Cott que conecta" +
                         " Italia con Francia. Su colina fue destino de varias" +
                         " etapas del Tour de Francia y del Giro de Italia.",
                         "Ha sido escalada 4 veces en el Giro de Italia: en " +
                                 "1994, en el 2000, en 2007 y en 2016. Los " +
                                 "primeros ciclistas que llegaron a la cima " +
-                                "son: Stefano Zanini (Italia), José Jaime " +
+                                "son, respectivamente: Stefano Zanini (Italia), José Jaime " +
                                 "González (Colombia), Yoann Le Boulanger " +
-                                "(Francia) y Michele Scarponi (Italia), " +
-                                "respectivamente", "ColleDellAgnello.jpg",
-                        44.683800, 6.979500));
+                                "(Francia) y Michele Scarponi (Italia).",
+                        "ColleDellAgnello.jpg",44.683800, 6.979500));
                 lugaresMiticos.add(new LugarMitico("Monte Zoncolan", "Es una " +
                         "montaña de 1750 metros en los Alpes Cárnicos que " +
                         "cuenta con una estación de esquí con casi 30 km de " +
                         "pistas, una de las más importantes de la región de " +
                         "Friul-Venecia Julia.", "Esta montaña fue ascendida 6" +
                         " veces durante el Giro de Italia. Los dos primeros " +
-                        "años, en 2003 y en 2007 el ganador fue Gilberto " +
+                        "años, en 2003 y en 2007, el ganador fue Gilberto " +
                         "Simoni (Italia), por lo que a partir de este " +
                         "momento, el monte Zoncolan fue apodado la montaña " +
                         "Simoni. Además, fue ascendida en 2010, cuyo ganador " +
-                        "fue Ivan Basso (Italia); en 2011, cuyo ganador fue " +
+                        "fue Ivan Basso (Italia); en 2011, siendo vencedor " +
                         "el español Igor Antón; en 2014, donde se hizo con la" +
                         " victoria Michael Rogers (Australia); y en 2018, " +
                         "donde el ganador fue Chris Froome (Reino Unido).",
                         "CimaZoncalan.jpg", 46.499701, 12.919230));
+                lugaresMiticos.add(new LugarMitico("Paso Gavia", "Es un paso de montaña ubicado " +
+                        "en los Alpes Réticos meridionales y es uno de los pasos más altos de " +
+                        "Europa.", "Ha sido ascendido 10 veces en el Giro de Italia: en 1960, donde Imerio " +
+                        "Massignan (Italia) se hizo con la victoria; en 1988, donde Johan Van der" +
+                        " Velde (Países Bajos) fue el ganador; en el 2000 fue el colombiano Chepe " +
+                        "González quien se hizo con la victoria; en 2014 el ganador fue Robinson " +
+                        "Chalapud (Colombia). Este paso fue Cima Coppi en 6 ocasiones: en 1996 " +
+                        "(el colombiano Hernán Buenahora se hizo con la victoria); en 1999 (Chepe" +
+                        " González, Colombia); en 2004 (Vladimir Miholjević, Croacia); en 2006 " +
+                        "(el español Juan Manuel Gárate fue el ganador); en 2008 (el mexicano Julio Alberto " +
+                        "Pérez Capio se hizo con la victoria) y en 2010 (Johann Tschopp, " +
+                        "Suiza)", "PassoDiGavia.jpg", 46.343611, 10.484611));
+                lugaresMiticos.add(new LugarMitico("Paso Giau", "Es un paso de montaña de 2236 " +
+                        "metros de altitud situado en las Dolomitas.", "Fue Cima Coppi en 1973, " +
+                        "donde el español José Manuel Fuente se hizo con la victoria; y en 2011, " +
+                        "cuando el italiano Stefano Garzelli fue el primero en pasar por la cumbre" +
+                        ".", "PassoDiGiau.jpg", 46.483114, 12.054164));
+                lugaresMiticos.add(new LugarMitico("Paso Pordoi", "Paso de montaña de 2239 " +
+                        "metros de altitud situado en las Dolomitas.", "Ha sido Cima Coppi en 13 " +
+                        "ocasiones. Fue ascendido por primera vez en 1940, donde el italiano Gino " +
+                        "Bartali se hizo con la victoria. Esta cima fue 4 veces final de etapa: " +
+                        "en 1990, donde el vencedor fue Charly Mottet (Francia); en 1991, donde " +
+                        "el italiano Franco Chioccioli fue el vencedor; en 1996, siendo esta vez " +
+                        "Enrico Zaina (Italia) el ganador; y en 2001, donde el vencedor fue el " +
+                        "mexicano Julio Alberto Pérez Cuapio.", "PassoPordoi.jpg", 46.488817,
+                        11.811757));
+                lugaresMiticos.add(new LugarMitico("Paso Stelvio", "Paso de montaña de 2758 " +
+                        "metros de altitud. Es el paso pavimentado de mayor elevación de los " +
+                        "Alpes Orientales y el segundo más alto de los Alpes.", "Ha sido " +
+                        "ascendido en 13 ocasiones en el Giro de Italia. La primera de ellas fue " +
+                        "en 1953, donde el vencedor fue el italiano Fauto Coppi. También fue " +
+                        "ascendido en 1956 y 1961. Fue 9 veces Cima Coppi: en 1965, 1972, 1975, " +
+                        "1980, 1994, 2005, 2012, 2014 y 2017, siendo en este último año el " +
+                        "español Mikel Landa el vencedor.", "Stelvio.jpg", 46.530000, 10.454000));
+                lugaresMiticos.add(new LugarMitico("Puerto de Mortirolo", "Puerto de montaña " +
+                        "italiano, conocido también como Puerto de la Foppa, que comunica las " +
+                        "zonas alpinas de la alta Valtellina y la alta Val Camonica.", "Fue " +
+                        "ascendido en 12 ocasiones en el Giro de Italia: en 1990, donde se hizo " +
+                        "con la victoria el venezolano Leoonardo Sierra; en 1991 (Franco " +
+                        "Chioccioli, Italia); en 1994 (Marco Pantani, Italia); en 1996 y 1999 " +
+                        "(Ivan Gotti, Italia); en 1997 (Waldimir Belli, Italia); en 2004 " +
+                        "(Raffaele Illiano, Italia); en 2006 y 2010 (Ivan Basso, Italia); en " +
+                        "2008 se hizo con la victoria el español Toni Colom; en 2012 (Oliver " +
+                        "Zaugg, Suiza); en 2015 (Steven Kruijswijk, Países Bajos); y en 2017, cuando el " +
+                        "vencedor fue el español Luis León Sánchez.", "PassoDelMortirolo.jpg",
+                        46.247940, 10.298304));
+                lugaresMiticos.add(new LugarMitico("Tres Cimas de Lavaredo", "Son tres picos " +
+                        "compuestos por dolomías. Sus nombres son: Cima Piccola (es el pico " +
+                        "pequeño), Cima Grande (el pico de mayor altura) y Cima Ovest (el pico " +
+                        "más occidental).", "Estas cimas han sido 7 veces final de etapa del Giro" +
+                        " de Italia: en 1967, cuando el italiano Felice Gimondi resultó ganador; " +
+                        "en 1968 (Eddy Merckx, Bélgica); en 1974 (José Manuel Fuente, España); en" +
+                        " 1981 (Beat Breu, Suiza); en 1989 (Lucho Herrera, Colombia); en 2007 " +
+                        "(Riccardo Riccò, Italia); y en 2013 (Vicenzo Nibali, Italia).",
+                        "TresCimasLavaredo.jpg", 46.618896, 12.302696));
 
                 Log.d("FIREBASE", "Lugares miticos a insertar: " + lugaresMiticos
                         .size());
 
-                // Introducir los elementos en la BBDD
+                // Introducir los lugares miticos en la BBDD
                 int lugaresMiticosInsertados = 0;
                 for (LugarMitico lugarMitico : lugaresMiticos) {
                     lugaresMiticosDatabaseReference.push().setValue(lugarMitico);
